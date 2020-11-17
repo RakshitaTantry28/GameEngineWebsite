@@ -18,11 +18,11 @@ pipeSouth.src = "images/pipeSouth.png";
 
 // some variables
 
-var gap = 150;
+var gap = 200;
 var constant;
 
 var bX = 10;
-var bY = 150;
+var bY = 200;
 
 var gravity = 1.5;
 
