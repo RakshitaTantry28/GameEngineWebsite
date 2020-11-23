@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Flappy Bird</title>
-
-    <style>
-
-#rules{
-	float:right; 
-	width:50%; 
-	
-}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Flappy Bird</title>
+  <style>
+      body{
+        text-align: center;
+      }
+      div{
+        display: inline-block;
+      }
+      #rules{
+       float:right; 
+       width:50%; 
+       margin-top: 5rem;
+      }
+      #canvas{
+        margin: 5rem 2rem;
+      }
+      @media screen and (max-width: 768px){
+        div{
+          display: block;
+        }
+        #rules{
+          float: none;
+          width: 100%;
+        }
+        #canvas{
+          margin: 2rem 1rem;
+        }
+      }
     </style>
-
-  </head>
-  <body>
-
- <canvas id="canvas" width="288" height="512"></canvas>
+</head>
+<body>
+  <h1><center>FLAPPY BIRD</center></h1>
+<div>
+  <canvas id="canvas" width="288" height="512"></canvas>
 
    <script src="flappyBird.js"></script>
+</div>
 
-   <div id="rules">
-
-<h1>RULES :</h1>
-<br>
-<h3>1) Use space bar to move up and down 
-<br> <br>
-2) if you hit the bar then you die 
-<br><br>
-3) You can see the score in the game
-<br><br></h3>
-
-ALL THE BEST !!
-
-   </div>
-
-  </body>
+<div id="rules">
+  <h1>RULES :</h1>
+  <br>
+  <h3>1) Use space bar to move up and down 
+  <br> <br>
+  2) if you hit the bar then you die 
+  <br><br>
+  3) You can see the score in the game
+  <br><br></h3>
+  ALL THE BEST !!
+</div>
+</body>
 </html>

@@ -51,6 +51,7 @@ function startGame() {
 }
 
 function createFood() {
+    document.getElementById("score").innerHTML = playerScore;
   snakeFood = {
     x: Math.round(Math.random() * (gameAreaWidth - cellWidth) / cellWidth),
     y: Math.round(Math.random() * (gameAreaHeight - cellWidth) / cellWidth),
