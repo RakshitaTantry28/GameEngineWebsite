@@ -1,0 +1,5 @@
+The Paddle Game is a simple project developed using JavaScript, CSS, and Html. This game is an interesting addictive fun game. Here, the player has to hit the layers of bricks with the small moving ball and destroy them. The ball moves straight around the screen by bouncing off the top and two sides of the screen. When a brick is hit, it is destroyed and the ball bounces back. The player loses a turn when the ball touches the bottom of the screen. Then you can start a new game just after the failure. To prevent from losing, the player has a horizontally movable paddle to bounce the ball upward, keeping it in play.
+
+Making of the Game
+
+The Paddle Game project is simply in HTML, CSS, and JavaScript. Taking about the features of this game, the user has to hit the layers of bricks with the small moving ball and destroy them. The pc control of the game is also very simple. You just have to use the cursor to move the paddle horizontally as per your requirement. Also, this game includes a lot of javascript for making the functioning of the game.
