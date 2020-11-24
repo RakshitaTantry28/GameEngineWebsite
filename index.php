@@ -1,5 +1,5 @@
 <?php
-include 'session.php';
+include "session.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -129,7 +129,7 @@ include 'session.php';
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Flappy Bird</div>
-                                <div class="portfolio-caption-subheading text-muted">How long you can servive?</div>
+                                <div class="portfolio-caption-subheading text-muted">How long you can survive?</div>
                             </div>
                         </div>
                     </div>
