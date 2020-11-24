@@ -1,37 +1,6 @@
 <?php
-
-if (isset($_POST['submit']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['message'])) {
-    $conn = mysqli_connect("localhost", "root", "root", "wdl");
-
-    if($conn->connect_error){
-        die("connection error".$conn->connect_error);
-    }else{
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $message = $_POST['message'];
-
-        $query = "select name from contact where name = '$name'";
-        $result = mysqli_query($conn,$query);
-
-        if (mysqli_fetch_assoc($result)) {
-            echo "<script>alert('Name exists, try again');</script>";
-        }else{
-            $sql = "insert into contact('name','email','phone','message') values('$name','$email','$phone','$message')";
-            $result = mysqli_query($conn,$sql);
-
-            if($result == true){
-                echo "<script>alert('Successful');</script>";
-            }else{
-                echo "<script>alert('Try again');</script>";
-            }
-        }
-    }
-}
-
+include 'session.php';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -66,7 +35,7 @@ if (isset($_POST['submit']) && isset($_POST['name']) && isset($_POST['email']) &
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#"><?php $_SESSION['user']; ?></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#"><?php echo $_SESSION['user']; ?></li>
                     </ul>
                 </div>
             </div>

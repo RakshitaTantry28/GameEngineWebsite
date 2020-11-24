@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         }else{
             session_start();
             $_SESSION['user'] = $username;
-            header('location:index.html');
+            header('location:index.php');
         }
     }
 }
