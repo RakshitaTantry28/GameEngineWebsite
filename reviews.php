@@ -15,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css\reviews.css" rel="stylesheet" type="text/css">
     </head>
     <body id="page-top">
 
@@ -30,10 +31,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Options">Options</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Games</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#Options">Options</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#portfolio">Games</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Reviews</a></li>
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
@@ -47,19 +48,19 @@
             <div class="container">
                 <div class="masthead-subheading">Game Set and Match !</div>
                 <div class="masthead-heading text-uppercase">Game World</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Let's go</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="index.php#portfolio">Let's go</a>
             </div>
         </header>
 
 
         <!-- Contact-->
-        <section class="page-section" id="contact" class="bg-light">
+        <section class="page-section" id="contact1">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
                     <h3 class="section-subheading text-muted">What do you think ??</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+                <form id="contact1Form" name="sentMessage" novalidate="novalidate" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
