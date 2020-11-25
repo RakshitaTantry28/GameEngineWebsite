@@ -1,6 +1,3 @@
-<?php
-include "session.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,6 +17,9 @@ include "session.php";
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+
+
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
@@ -34,12 +34,16 @@ include "session.php";
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Games</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#"><?php echo $_SESSION['user']; ?></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="reviews.php">Reviews</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
                 </div>
+                <a class="navbar-brand js-scroll-trigger" href=""><img src="" alt="" style="margin-left: 20px" /><?php if($_SESSION['user']){ echo $_SESSION['user'];}else{ echo "Guest";} ?></a>
             </div>
         </nav>
+
+
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
@@ -57,32 +61,41 @@ include "session.php";
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
+                        <a href="https://github.com/RNNWdl/Game-World">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
                         </span>
+                        </a>
                         <h4 class="my-3"><a href="https://github.com/RNNWdl/Game-World">Develop</a></h4>
                         <p class="text-muted">Good to see you here! Want to add your own to this list ?</p>
                     </div>
                     <div class="col-md-4">
+                        <a href="#portfolio">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
                         </span>
+                        </a>
                         <h4 class="my-3"><a href="#portfolio" class="text-primary">Play</a></h4>
                         <p class="text-muted">Hello Champ ! Get your hands ready for the game !!</p>
                     </div>
                     <div class="col-md-4">
+                        <a href="">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-comments fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3"><a href="https://github.com/RNNWdl/Game-World">Source</a></h4>
-                        <p class="text-muted">Loved a game ? Here you'll get the code.</p>
+                        </a>
+                        <h4 class="my-3"><a href="">Reviews</a></h4>
+                        <p class="text-muted">Let us know your views...</p>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
         <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
@@ -97,7 +110,7 @@ include "session.php";
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/checkers.png" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/checkers.PNG" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Checkers</div>
@@ -175,9 +188,99 @@ include "session.php";
                             </div>
                         </div>
                     </div>
+
+
+
+                    <div class="col-lg-4 col-sm-6 mb-4 mt-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/dice.PNG" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Dice</div>
+                                <div class="portfolio-caption-subheading text-muted">Who will win ???</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mt-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal8">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Fantasy Cricket</div>
+                                <div class="portfolio-caption-subheading text-muted">Let's play a game</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mt-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal9">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/goblin.PNG" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Goblin</div>
+                                <div class="portfolio-caption-subheading text-muted">Let's catch some Goblins...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal10">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/paddle.PNG" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Paddle Game</div>
+                                <div class="portfolio-caption-subheading text-muted">bam bam bam ...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal11">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.jpg" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Quiz</div>
+                                <div class="portfolio-caption-subheading text-muted">Test your knowledge..</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal12">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/portfolio/speed.PNG" alt="" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Typing Speed Game</div>
+                                <div class="portfolio-caption-subheading text-muted">Check typing speed!</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+
         <!-- About-->
         <!-- <section class="page-section" id="about">
             <div class="container">
@@ -240,8 +343,12 @@ include "session.php";
                 </ul>
             </div>
         </section> -->
+
+
+
+
         <!-- Team-->
-        <section class="page-section bg-light" id="team">
+        <section class="page-section" id="team">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
@@ -284,6 +391,10 @@ include "session.php";
                 </div> -->
             </div>
         </section>
+
+
+
+
         <!-- Clients-->
         <!-- <div class="py-5">
             <div class="container">
@@ -303,45 +414,10 @@ include "session.php";
                 </div>
             </div>
         </div> -->
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">What do you think ??</h3>
-                </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate" action="action.php" method="POST">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" name="name" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" name="email" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" name="message" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <!-- <div id="success"></div> -->
-                        <button class="btn btn-primary btn-xl text-uppercase" name="submit" id="sendMessageButton" type="submit">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+
+
         <!-- Footer-->
-        <footer class="footer py-4">
+        <footer class="footer py-4 bg-light">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
@@ -358,6 +434,9 @@ include "session.php";
                 </div>
             </div>
         </footer>
+
+
+
         <!-- Portfolio Modals-->
         <!-- Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -521,6 +600,180 @@ include "session.php";
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/snake-game/index.html" class="text-white">Start Game</a>
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal7 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Dice</h2>
+                                    <p class="item-intro text-muted">Who will win ???</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/dice.PNG" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-rocket mr-1"></i>
+                                        <a href="Games/Dice-game/index.html" class="text-white">Start Game</a>
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 8-->
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Fantasy Cricket</h2>
+                                    <p class="item-intro text-muted">Let's play a game</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3-thumbnail.jpg" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-rocket mr-1"></i>
+                                        <a href="Games/Fantasy-Cricket-master/index.php" class="text-white">Start Game</a>
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 9-->
+        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Goblin</h2>
+                                    <p class="item-intro text-muted">Let's catch some Goblins...</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/goblin.PNG" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-rocket mr-1"></i>
+                                        <a href="Games/Goblin/index.html" class="text-white">Start Game</a>
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 10-->
+        <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Paddle Game</h2>
+                                    <p class="item-intro text-muted">bam bam bam ...</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/paddle.PNG" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-rocket mr-1"></i>
+                                        <a href="Games/PaddleGame/index.html" class="text-white">Start Game</a>
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 11-->
+        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Quiz</h2>
+                                    <p class="item-intro text-muted">Test your knowledge..</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/quiz.PNG" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-rocket mr-1"></i>
+                                        <a href="Games/Quiz/firstpage.html" class="text-white">Start Game</a>
+                                    </button>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times mr-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 12-->
+        <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Typing Speed Game</h2>
+                                    <p class="item-intro text-muted">Check typing speed!</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/speed.PNG" alt="" />
+                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-rocket mr-1"></i>
+                                        <a href="Games/Typing-speed/index.html" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
