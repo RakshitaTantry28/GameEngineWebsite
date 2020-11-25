@@ -1,3 +1,24 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','wdl');
+session_start();
+   
+   if(!isset($_SESSION['user'])){
+    $_SESSION['indexuser'] = "guest";
+   }
+   else{
+    $user_check = $_SESSION['user'];
+   
+    $result = mysqli_query($conn,"select username from users where username = '$user_check' ");
+    
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    
+    $login_session = $row['username'];
+    $_SESSION['indexuser'] = $_SESSION['user'];
+   }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

@@ -1,3 +1,24 @@
+<?php
+
+$conn = mysqli_connect('localhost','root','','wdl');
+session_start();
+   
+   if(!isset($_SESSION['user'])){
+    $_SESSION['indexuser'] = "guest";
+   }
+   else{
+    $user_check = $_SESSION['user'];
+   
+    $result = mysqli_query($conn,"select username from users where username = '$user_check' ");
+    
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    
+    $login_session = $row['username'];
+    $_SESSION['indexuser'] = $_SESSION['user'];
+   }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -38,7 +59,7 @@
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
                 </div>
-                <a class="navbar-brand js-scroll-trigger" href=""><img src="" alt="" style="margin-left: 20px" /><?php if($_SESSION['user']){ echo $_SESSION['user'];}else{ echo "Guest";} ?></a>
+                <a class="navbar-brand js-scroll-trigger" href=""><img src="" alt="" style="margin-left: 20px" /><?php echo $_SESSION['indexuser'];?></a>
             </div>
         </nav>
 
