@@ -273,8 +273,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `uname`, `email`, `password`, `points`, `rank`) VALUES
 (1, 'unknown32', 'unknown@gmail.com', 'unknown123', 100, 3),
-(2, 'vedant123', 'vedant123@gmail.com', 'ketan3232', 50, 4),
-(7, 'ketan3232', 'ketan3232@gmail.com', 'ketan3232', 360, 2),
+(2, 'nikita123', 'Sniks@gmail.com', 'SarNik', 50, 4),
+(7, 'raksh209', 'RT3232@gmail.com', 'R3232', 360, 2),
 (15, 'hello3232', 'hello3232@gmail.com', 'hello3232', 1708, 1);
 
 --

@@ -49,38 +49,17 @@ body{
 
 }
 
-/*login button position*/
 #gobut{
     margin-left: 50px;
     position: absolute;
     margin-top: 300px
 }
 
-/*main login button*/
-#login{
-    margin-left: 60%;
-    position: absolute;
-    margin-top: 100px;
-    background-color:transparent;
-    color:white;
-    font-family: Montserrat;
-    border:2px solid #5DBCD2;
-    font-size: 20px;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing: -0.4px;
-    text-decoration: none;
-    border-radius: 4px;
-    padding: 12px 60px;
-    display: inline-block;
-
-}
-
 /*register button*/
 #register{
     margin-left: 1000px;
     position: absolute;
-    margin-top: 170px
+    margin-top: 250px
 }
 
 /*how to play head*/
@@ -231,4 +210,3 @@ span.psw {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
-

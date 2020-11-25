@@ -10,6 +10,15 @@
 <?php
 include '../connect.php';
 session_start();
+$uid = $_SESSION['id'];
+$q5="select * from scorecard where id='$uid'";
+    $result3=mysqli_query($connect,$q5);
+    $num4=mysqli_num_rows($result3);
+    if($num4 != 1){
+        $id2 = $_SESSION['id'];
+        $q0 ="INSERT INTO scorecard (id, matchid, selplay, points) VALUES ('$id2' ,1,0,0)";
+        $result1 = mysqli_query($connect,$q0);
+    }
 if(!$_SESSION['uname']){
     echo "<script> alert('Please login first') </script>";
     header('Location: ../index.php');
@@ -39,7 +48,7 @@ if(!$_SESSION['uname']){
         $q1="SELECT * from scorecard WHERE id='$userid'";
         $result1=mysqli_query($connect,$q1);
         $row_users1 = mysqli_fetch_array($result1);
-        $_SESSION['points']=$row_users1['points'];
+        // $_SESSION['points']=$row_users1['points'];
 
         
         echo $team1 ," vs ", $team2;

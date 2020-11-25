@@ -1,6 +1,6 @@
 <?php
 //CODE TO CONNECT PHP WITH DATABASE.
-$hostname="127.0.0.1"; 		//hostname
+$hostname="localhost"; 		//hostname
 $username="root"; 			//username for database
 $password=""; 				//database password
 $dbname="my11"; 		//database name

@@ -22,10 +22,11 @@ else
     $_SESSION['uname'] = $row_users['uname'];
     $_SESSION['email'] = $row_users['email'];
     $_SESSION['points'] = $row_users['points'];
-
+    
     //ranking
     $q="SELECT * FROM users ORDER BY points DESC";
-    $result = mysqli_query($connect,$q);         
+    $result = mysqli_query($connect,$q);  
+
     $rank=0;            
     while($row = mysqli_fetch_array($result))
     {

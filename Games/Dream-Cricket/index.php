@@ -2,7 +2,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>my11</title>
-        <link rel='stylesheet' type='text/css' href='homecss.css' >
+        <link rel="stylesheet" href="homecss.css" >
         <script src="homescript.js"></script>
     </head>    
     <?php 
@@ -17,17 +17,15 @@
     
     <body>
     <div id="mainimg">
-        <div id="logo">MY11</div>
-        <input id="login" type="button" value="LOG IN" onclick="homelog()" style="width:auto">
+        <div id="logo">MYTeam11</div>
         <input id="register" class="gobutton" type="button" value="Register & play" onclick="homereg()">
-        <div id="head">PLAY FANTASY CRICKET.<br> WIN CASH DAILY!</div>
+        <div id="head"><br>PLAY MYTeam11 CRICKET</div>
         <input id="gobut" class="gobutton" type="button" value="Let's Play" onclick="homelog()">
     </div>    
     <div class="howtoplay">
         <h1>How to Play</h1>
         <hr>
-        <h3 class="sub">1.Select the match<br>2.Create you my11 team<br>3.Score points and win cool prizes</h3>
-        <input id="gobut1" class="gobutton" type="button" value="Let's Play" onclick="homelog()">
+        <h3 class="sub">1.Select the match<br>2.Create your my11 team<br>3.Score points and win cool prizes</h3
     </div>
 
     <div id="homelogin" class="modal">
@@ -62,13 +60,13 @@
                     <p>Please fill in this form to create an account.</p>
                     <hr>
                     <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter username" name="uname" required>
+                    <input type="text" placeholder="Enter 8 char username" name="uname" required>
 
                     <label for="text"><b>Email</b></label>
                     <input type="email" placeholder="Enter Email" name="email" required>
               
                     <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <input type="password" placeholder="Enter 8 char Password" name="password" required>
                     
                     <label for="psw-repeat"><b>Repeat Password</b></label>
                     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>

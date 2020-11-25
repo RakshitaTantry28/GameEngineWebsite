@@ -35,7 +35,7 @@ else{
 $q="SELECT * FROM players where country='$team1' || country='$team2'";
 $result = mysqli_query($connect,$q);          
 $no=1;
-echo "Select players:";
+echo "Select 22 players:";
 echo "<form method='post' id='selectform' action='player.php'>";
 echo "<table border='1'>
 <tr>

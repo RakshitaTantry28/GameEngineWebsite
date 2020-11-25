@@ -235,7 +235,7 @@ session_start();
                                 <img class="img-fluid" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Fantasy Cricket</div>
+                                <div class="portfolio-caption-heading">MYTeam11 Cricket</div>
                                 <div class="portfolio-caption-subheading text-muted">Let's play a game</div>
                             </div>
                         </div>
@@ -672,13 +672,13 @@ session_start();
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Fantasy Cricket</h2>
+                                    <h2 class="text-uppercase">MYTeam11 Cricket</h2>
                                     <p class="item-intro text-muted">Let's play a game</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3-thumbnail.jpg" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/Fantasy-Cricket-master/index.php" class="text-white">Start Game</a>
+                                        <a href="Games/Dream-Cricket/index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>

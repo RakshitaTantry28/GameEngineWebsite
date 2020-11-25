@@ -1,7 +1,9 @@
 <?php
 include '../connect.php';
 
+   
 session_start();
+
 $uid=$_SESSION['id'];
 
   $b = $_POST['bats'];

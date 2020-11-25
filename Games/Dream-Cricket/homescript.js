@@ -53,19 +53,17 @@ function validateform(){
     
     uname = uname.trim();
     if (uname.length < 8) {
-        alert("Username should contian 8 char");
+        alert("Username should contain 8 characters");
         return false;
     }
 
-    //password = password.trim();
     if (password.length < 8) {
-        alert("password should contian 8 char");
+        alert("password should contain 8 characters");
         return false;
     }
 
-    //pasrepeat = pasrepeat.trim();
     if(password != pasrepeat){
-        alert("Both password does not match");
+        alert("Both the passwords does not match");
         return false;
     }
 
