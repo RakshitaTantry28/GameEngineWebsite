@@ -15,7 +15,11 @@ session_start();
     
     $login_session = $row['username'];
     $_SESSION['indexuser'] = $_SESSION['user'];
+
    }
+
+
+
 
 ?>
 
@@ -35,8 +39,12 @@ session_start();
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link href="css/styles.css" rel="stylesheet" />
-        <link href="css\reviews.css" rel="stylesheet" type="text/css">
+        <link href="css/reviews.css" rel="stylesheet" type="text/css">
     </head>
     <body id="page-top">
 
@@ -74,43 +82,58 @@ session_start();
         </header>
 
 
-        <!-- Contact-->
-        <section class="page-section" id="contact1">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">What do you think ??</h3>
-                </div>
-                <form id="contact1Form" name="sentMessage" novalidate="novalidate" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" name="name" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" name="email" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" name="message" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <!-- <div id="success"></div> -->
-                        <button class="btn btn-primary btn-xl text-uppercase" name="submit" id="sendMessageButton" type="submit">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+
+
+        <section >
+
+
+            <center><h1 style="color:#1e88e5">REVIEWS</h1></center>
+
+        <?php
+
+        $conn = mysqli_connect('localhost','root','','wdl');
+        if ($conn->connect_error) {
+            die('connection error'.$conn->connect_error);
+        }
+        else
+        {
+            $query = "select * from reviews";
+            $result = mysqli_query($conn,$query);
+
+            if (!($result)) {
+                echo "No comments yet :(";
+            }
+            else
+            {
+                while($row = mysqli_fetch_assoc($result)) {
+
+                    ?>
+
+                    <!-- echo "<blockquote>".$row['name']."<br>".$row['review']."</blockquote>"; -->
+
+                     <div class="card mx-auto my-4 " style="width:1000px;">
+          <div class="card-header text-white bg-dark" style="backgroung-color:#003991 ; color:#ffffff; ">
+            <?php echo $row['name'];?>
+          </div>
+          <div class="card-body" class="text-primary">
+            <p class="card-text"><?php echo $row['review'];?></p>
+          </div>
+        </div>
+
+                    <?php
+                }
+              
+            }
+        }
+
+        ?>
+
+       
+
+    </section>
+
+
+       
 
 
         <!-- Footer-->

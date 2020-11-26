@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3307
--- Generation Time: Nov 24, 2020 at 06:03 AM
--- Server version: 5.7.24
--- PHP Version: 7.4.1
+-- Host: localhost
+-- Generation Time: Nov 26, 2020 at 05:06 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,28 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `register1`
+-- Table structure for table `reviews`
 --
 
-CREATE TABLE `register1` (
+CREATE TABLE `reviews` (
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `pass` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `phone_no` int(10) NOT NULL,
+  `review` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `register1`
+-- Dumping data for table `reviews`
 --
 
-INSERT INTO `register1` (`name`, `email`, `pass`) VALUES
-('Nikita Sarode', 'sarodenik12@gmail.com', '1234567'),
-('Nikita ', 'sarodenikita24@gmail.com', '123456789'),
-('Niki', 'sarodenik12@gmail.com', '234567890p[]'),
-('Niks', 'niks@gmail.com', '3456789'),
-('Nikita G Sarode', 'niktasarode@ieee.org', '654321'),
-('Nikitatada', 'sarodenikita24@gmail.com', '14789652'),
-('amruta', 'sarodeamrita24@gmail.com', '123456'),
-('Nikita_Tadaa', 'sarodenik12@gmail.com', '1234567890pokjbv');
+INSERT INTO `reviews` (`name`, `email`, `phone_no`, `review`) VALUES
+('Nidhi', 'rnsxdcd', 908932022, 'Noice'),
+('Nikita', 'nikita@nothing.com', 12312312, 'This is a very great website !! Very amazing stuff and good games and also very unique !! I love it ....'),
+('Amruta ', 'amruta@why.com', 787877878, 'Ta bong👍🏻'),
+('Rakesh', 'Rakesh@panmasala.com', 0, 'Awesome Panmasal khaike!! 🍃');
 
 -- --------------------------------------------------------
 
@@ -66,7 +62,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`) VALUES
-(1, 'nikita', 'nikita_sarode', '123456');
+(1, 'nikita', 'nikita_sarode', '123456'),
+(2, 'Nidhi', 'nidhi_vanjare', '123456');
 
 --
 -- Indexes for dumped tables
@@ -86,7 +83,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

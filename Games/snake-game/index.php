@@ -21,6 +21,10 @@
   		<script src="app.js"></script>
 	</div>
 
+  <?php 
+    echo "hellow".$_COOKIE["score"]; 
+  ?>
+
 </body>
 
 </html>

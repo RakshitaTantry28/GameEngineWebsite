@@ -39,8 +39,10 @@ session_start();
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/reviews.css">
     </head>
     <body id="page-top">
+
 
 
 
@@ -376,6 +378,9 @@ session_start();
 
 
 
+
+
+
         <!-- Team-->
         <section class="page-section" id="team">
             <div class="container">
@@ -420,6 +425,82 @@ session_start();
                 </div> -->
             </div>
         </section>
+
+
+         <!-- Contact-->
+        <section class="page-section" id="contact1">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">What do you think ??</h3>
+                </div>
+                <form id="contact1Form" name="sentMessage" novalidate="novalidate" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" name="name" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="email" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" name="message" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <!-- <div id="success"></div> -->
+                        <button class="btn btn-primary btn-xl text-uppercase" name="submit" id="sendMessageButton" type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <?php
+
+                //saving reviews
+        $conn = mysqli_connect('localhost','root','','wdl');
+        if(isset($_POST['submit'])) {
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $number =  $_POST['phone'];
+        $review = $_POST['message'];
+
+        echo "$name";
+
+
+
+        $query = "insert into reviews values('$name','$email','$number','$review')";
+
+        $result1 = mysqli_query($conn,$query);
+
+        if(!$result1)
+        {
+            echo "<script>alert('Try Again !');</script>";
+            echo "$name";
+        }
+        else
+        {
+            echo "<script>alert('DoNe!');</script>";
+        }
+
+
+
+        }
+
+        ?>
+
 
 
 
