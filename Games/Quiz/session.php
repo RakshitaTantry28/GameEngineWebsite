@@ -3,11 +3,11 @@
 
 
 $server = 'localhost';
-$password = "";
-$username = "root";
+$pas = "";
+$name = "root";
 $dbname="Quiz";
 
-$conn = mysqli_connect("$server","$username","$password","$dbname");
+$conn = mysqli_connect("$server","$name","$pas","$dbname");
 
 if(!isset($_SESSION['user']))
 {

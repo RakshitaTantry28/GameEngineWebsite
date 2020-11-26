@@ -1,9 +1,12 @@
 <?php
 
+
+
 $conn = mysqli_connect('localhost','root','','wdl');
 session_start();
    
-   if(!isset($_SESSION['user'])){
+   if(!isset($_SESSION['user']))
+   {
     $_SESSION['indexuser'] = "guest";
    }
    else{
@@ -381,9 +384,9 @@ session_start();
                             <img class="mx-auto rounded-circle" src="assets/img/team/nikita.jpeg" alt="" />
                             <h4>Nikita Sarode</h4>
                             <p class="text-muted">Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/SarodeNikita"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/nikita24383"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/nikita-sarode-b62b7917b/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -392,8 +395,8 @@ session_start();
                             <h4>Rakshita Tantry</h4>
                             <p class="text-muted">Designer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/RakshitaTantry28"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/rakshita-tantry/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -401,9 +404,9 @@ session_start();
                             <img class="mx-auto rounded-circle" src="assets/img/team/nidhi.png" alt="" />
                             <h4>Nidhi Vanjare</h4>
                             <p class="text-muted">Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/Nidhi_vanjare"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/nidhivanjare"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/nidhi-vanjare-368b501a4/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -501,7 +504,7 @@ session_start();
                                     <h2 class="text-uppercase">Doodle Ship</h2>
                                     <p class="item-intro text-muted">Look at your Speed</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/doodle.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>In this game you have to control a spaceship, while dodging blocks falling. Your score is increased when a block reaches the bottom</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/doodleship-master/DoodleShip.html" class="text-white">Start Game</a>
@@ -530,7 +533,7 @@ session_start();
                                     <h2 class="text-uppercase">Flappy Bird</h2>
                                     <p class="item-intro text-muted">How long you can survive?</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/flappy.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>Flappy Bird is an arcade-style game in which the player controls the bird Faby, which moves persistently to the right. The player is tasked with navigating Faby through pairs of pipes that have equally sized gaps placed at random heights.</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/FlappyBird/index.html" class="text-white">Start Game</a>
@@ -617,7 +620,7 @@ session_start();
                                     <h2 class="text-uppercase">Snake Game</h2>
                                     <p class="item-intro text-muted">Grab as much as you can!</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/snake.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>The player controls a dot, square, or object on a bordered plane. As it moves forward, it leaves a trail behind, resembling a moving snake. In some games, the end of the trail is in a fixed position, so the snake continually gets longer as it moves. </p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/snake-game/index.html" class="text-white">Start Game</a>
@@ -785,7 +788,7 @@ session_start();
                                     <h2 class="text-uppercase">Quiz</h2>
                                     <p class="item-intro text-muted">Test your knowledge..</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/quiz.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>Answer the pop quiz and test your knowledge!!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/Quiz/firstpage.html" class="text-white">Start Game</a>

@@ -6,10 +6,13 @@ include 'session.php';
 $count=0;
 
 $sc = 0;
-$answer="a";
 
-if(isset($_POST['Next']) && $_SESSION['clicks']<5)
+
+
+if(isset($_POST['Next']) && $_SESSION['clicks']<15)
 {
+    if($_SESSION['clicks'] > 0) {
+
       $answer = $_POST['ans'];
       $_SESSION['clicks'] += 1 ;
       $count = $_SESSION['clicks'];
@@ -24,8 +27,17 @@ if(isset($_POST['Next']) && $_SESSION['clicks']<5)
           $_SESSION['score']+= 1;
           $sc = $_SESSION['score'] ;        
     }
+
+  }
+  else
+  {
+     $_SESSION['clicks'] += 1 ;
+      $count = $_SESSION['clicks'];
+  }
+
+
 }
-elseif($_SESSION['clicks']>=5)
+elseif($_SESSION['clicks']>=15)
 {
     header("location:score.php");
    
@@ -61,12 +73,20 @@ $result = mysqli_query($conn,$q);
 $row = $result->fetch_assoc();
 if ($result->num_rows > 0)
   {
-     echo "<br> $count: ". $row["ques"] . "<br>";
+     echo "<br>". $row["ques"] . "<br>";
   }
 
 ?>
 
 </h2>
+
+<?php
+
+if($count > 0  && $count<=15)
+
+{
+
+?>
 
 <br>
 <form  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" >
@@ -87,18 +107,32 @@ if ($result->num_rows > 0)
 
 <input type="submit" value="Next" name="Next" > 
 
-
-
-
-
 </form>
 
 
-
-
-
-
-
 </div>
 </div>
+
+
+<?php
+
+}
+
+elseif($count == 0)
+{
+  ?>
+
+  <form  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" >
+
+    <br>
+
+<input type="submit" value="Next" name="Next" > 
+
+</form>
+
+<?php
+
+}
+
+?>
 

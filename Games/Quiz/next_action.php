@@ -19,5 +19,13 @@ if(isset($_POST["start"]))
 
 
 }
+if(isset($_POST["exit"]))
+{
+	
+	
+	header("location:http://192.168.64.2/Game-World/index.php");
+
+
+}
 
 ?>

@@ -12,7 +12,7 @@ session_start();
 
   	<br>
 
-			<h2 class="active"> <?php echo $_SESSION['score']; ?> </h2>
+			<h2 class="active"> <?php echo ($_SESSION['score']+1); ?> </h2>
 
     <br>
 
