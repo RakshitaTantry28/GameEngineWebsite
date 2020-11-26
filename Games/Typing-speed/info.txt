@@ -1,10 +1,19 @@
 # JS_SpeedTypingGame
 This project is a game created with HTML, CSS and Javascript using Random Quotes Api
 
-Typing Speed Game is a simple project developed using HTML 5, CSS, and JavaScript. This project helps you to improve your Typing speed. This is like a game, a typing test. Here, you have to copy the provided text exactly in the field given. You can start your typing by clicking the start button and also can stop it before completion of the task..
+Typing Speed Game is a simple project developed using HTML 5, CSS, and JavaScript. 
+This game helps you to improve your Typing speed.  
+You just have to type those provided texts without making any mistakes in the field given. 
+Also, when you make mistakes the wrong letters in the word will turn into red and the background keeps on changing itself.
+You can start your typing by clicking the start button and also can stop it before completion of the task..
+
+
 
 Making of the Project
-This project is simply in HTML, Canvas, CSS, and JavaScript. Taking about the features of this project, the user can improve their Typing speed. You just have to type those provided texts without making any mistakes. Also, when you make mistakes the wrong letters in the word will turn into red and the background keeps on changing itself.
+This project is simply in HTML, Canvas, CSS, and JavaScript. 
+Taking about the features of this project, the user can improve their Typing speed. 
+You just have to type those provided texts without making any mistakes. 
+Also, when you make mistakes the wrong letters in the word will turn into red and the background keeps on changing itself.
 
 Also, this project includes a lot of JavaScript for making validations to certain parts of the project.
 

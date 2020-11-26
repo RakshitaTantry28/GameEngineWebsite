@@ -559,7 +559,7 @@ session_start();
                                     <h2 class="text-uppercase">Guess the Switch</h2>
                                     <p class="item-intro text-muted">Light your luck...</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/switch.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>The game is all about guessing the right switch! Game has total 6 levels !! In every level you will get 3 attempts to guess !!! Points will be assigned based on the number of attempts you took to guess</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/GuessGame/index.php" class="text-white">Start Game</a>
@@ -646,7 +646,17 @@ session_start();
                                     <h2 class="text-uppercase">Dice</h2>
                                     <p class="item-intro text-muted">Who will win ???</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/dice.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>This is a simple casino-style game
+                                        All you have to do is roll the dice and try to reach 100 points faster than your opponent player.
+                                        GAME RULES:
+
+                                        - The game has 2 players, playing in rounds
+                                        - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+                                        - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+                                        - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. 
+                                        After that, it's the next player's turn
+                                        - The first player to reach 100 points on GLOBAL score wins the game
+                                        - You can also set the threshold(minimum wining points) value on your own.</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/Dice-game/index.html" class="text-white">Start Game</a>
@@ -675,7 +685,13 @@ session_start();
                                     <h2 class="text-uppercase">MYTeam11 Cricket</h2>
                                     <p class="item-intro text-muted">Let's play a game</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3-thumbnail.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>This Game will make the user select the team and also gets the points in winning teams.
+                                        Admin will select the country which will play the match. 
+                                        continuously, select the day for the match. 
+                                        Firstly, users need to register to the system and then they can log in to the system by entering the username and password.
+                                        Users will select the team for them and submit it. 
+                                        They can even change the details of their own. Such as username, password, etc.
+                                        Have fun!!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/Dream-Cricket/index.php" class="text-white">Start Game</a>
@@ -733,7 +749,14 @@ session_start();
                                     <h2 class="text-uppercase">Paddle Game</h2>
                                     <p class="item-intro text-muted">bam bam bam ...</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/paddle.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>This game is an interesting addictive fun game. 
+                                        Here, the player has to hit the layers of bricks with the small moving ball and destroy them. 
+                                        The ball moves straight around the screen by bouncing off the top and two sides of the screen. 
+                                        When a brick is hit, it is destroyed and the ball bounces back. 
+                                        The player loses a turn when the ball touches the bottom of the screen. 
+                                        Then you can start a new game just after the failure. 
+                                        To prevent from losing, the player has a horizontally movable paddle to bounce the ball upward, keeping it in play.
+                                        You just have to use the cursor to move the paddle horizontally as per your requirement.</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/PaddleGame/index.html" class="text-white">Start Game</a>
@@ -791,7 +814,11 @@ session_start();
                                     <h2 class="text-uppercase">Typing Speed Game</h2>
                                     <p class="item-intro text-muted">Check typing speed!</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/speed.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>This game helps you to improve your Typing speed.  
+                                        You just have to type those provided texts without making any mistakes in the field given. 
+                                        Also, when you make mistakes the wrong letters in the word will turn into red and the background keeps on changing itself.
+                                        You can start your typing by clicking the start button and also can stop it before completion of the task..
+                                    </p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/Typing-speed/index.html" class="text-white">Start Game</a>

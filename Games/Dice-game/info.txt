@@ -1,4 +1,6 @@
 /*
+This is a simple casino-style game
+All you have to do is roll the dice and try to reach 100 points faster than your opponent player.
 GAME RULES:
 
 - The game has 2 players, playing in rounds
@@ -7,6 +9,7 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. 
   After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
+- You can also set the threshold(minimum wining points) value on your own.
 
 */
 
