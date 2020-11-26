@@ -1,12 +1,8 @@
 <?php
 
 
-$server = 'localhost';
-$password = "";
-$username = "root";
-$dbname="Quiz";
 
-$conn = mysqli_connect("$server","$username","$password","$dbname");
+$conn = mysqli_connect('localhost','root','','wdl');
 session_start();
    
    if(!isset($_SESSION['user']))
@@ -388,9 +384,9 @@ session_start();
                             <img class="mx-auto rounded-circle" src="assets/img/team/nikita.jpeg" alt="" />
                             <h4>Nikita Sarode</h4>
                             <p class="text-muted">Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/SarodeNikita"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/nikita24383"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/nikita-sarode-b62b7917b/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -399,8 +395,8 @@ session_start();
                             <h4>Rakshita Tantry</h4>
                             <p class="text-muted">Designer</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/RakshitaTantry28"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/rakshita-tantry/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -408,9 +404,9 @@ session_start();
                             <img class="mx-auto rounded-circle" src="assets/img/team/nidhi.png" alt="" />
                             <h4>Nidhi Vanjare</h4>
                             <p class="text-muted">Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-github"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/Nidhi_vanjare"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/nidhivanjare"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/nidhi-vanjare-368b501a4/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
