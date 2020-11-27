@@ -4,7 +4,9 @@ if (isset($_POST['submit'])) {
     $conn = mysqli_connect('localhost','root','','wdl');
     if ($conn->connect_error) {
         die('connection error'.$conn->connect_error);
-    }else{
+    }
+    else
+    {
         $name1 = $_POST['name'];
         $username1 = $_POST['username'];
         $password1 = $_POST['password'];
@@ -14,7 +16,9 @@ if (isset($_POST['submit'])) {
 
         if (mysqli_fetch_row($result) == 1) {
             echo "username exists";
-        }else{
+        }
+        else
+        {
             $query1 = "insert into users values('$name1','$username1','$password1')";
             $result1 = mysqli_query($conn,$query1);
 
@@ -22,7 +26,7 @@ if (isset($_POST['submit'])) {
                 echo "<script>alert('Try again');</script>";
             }else{
                 session_start();
-                $_SESSION['user'] = $username;
+                $_SESSION['user'] = $username1;
                 echo "<script>alert('Registration sucessfully');</script>";
                 header('location:index.php');
             }
@@ -90,7 +94,7 @@ if (isset($_POST['submit'])) {
                         	<button class="btn btn-primary btn-xl text-uppercase" name="submit" type="submit">Register</button>
                     	</div>
                     	<div class="text-center">
-                        	<p class="text-muted">New user?<a href="login.php">login here!</a></p>
+                        	<p class="text-muted">New user?<a href="login.php">LOGIN HERE!</a></p>
                         </div>
                     </div>
 			</form>

@@ -47,3 +47,13 @@ section#contact1 form#contact1Form :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
 }
+
+blockquote {
+    border-left: solid 8px #e4e4e4;
+    font-style: italic;
+    margin: 0 0 2.25em 0;
+    padding: 0.5em 0 0.5em 2em;
+    font-size:  30px;
+    background: #ddd;
+
+  }

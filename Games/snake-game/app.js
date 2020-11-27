@@ -114,6 +114,8 @@ function writeScore() {
   gameAreaContext.font = "50px sans-serif";
   gameAreaContext.fillStyle = "#FF0000";
   gameAreaContext.fillText("Score: " + playerScore, (gameAreaWidth / 2) - 100, gameAreaHeight / 2);
+
+  document.getElementById("sc").innerHTML = "Score: "+playerScore;
 }
 
 function createSquare(x, y) {
@@ -131,3 +133,7 @@ function changeDirection(e) {
 
 window.onkeydown = changeDirection;
 window.onload = initialize;
+
+
+ 
+  
