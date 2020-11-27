@@ -30,6 +30,7 @@ session_start();
         <meta name="description" content="" />
         <meta name="author" content="" />
          <title>Game World</title> 
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900"rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -43,11 +44,14 @@ session_start();
     </head>
     <body id="page-top">
 
+    <!-- <div id="loader" class="loading">
+       <div class="loading-logo"><img src="assets/img/game-world.png" class="logo"></div>
+   </div> -->
 
 
 
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="" alt="" />Game World</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,25 +65,38 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="reviews.php">Reviews</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
                 </div>
                 <a class="navbar-brand js-scroll-trigger" href=""><img src="img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a>
             </div>
-        </nav>
+        </nav> 
 
-
+        <!-- <div class="contentFixed">
+       <header class="header">
+           <h1 class="headerTitle"><img 
+            src="assets/img/game-world.png" class="logo"> Game World</h1>
+       </header>
+       <nav class="menu" id="siteNav">
+           <ul>
+               <li><a href="#Options">Options</a></li>
+               <li><a href="#portfolio">Games</a></li>
+               <li><a href="#">Dashboard</a></li>
+               <li><a href="#team">Team</a></li>
+               <li><a href="reviews.php">Reviews</a></li>
+           </ul>
+       </nav>
+   </div> -->
 
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">Game Set and Match !</div>
-                 <div class="masthead-heading text-uppercase">Game World</div> 
-                <!-- <p class="ml9"> 
+                 <!-- <div class="masthead-heading text-uppercase">Game World</div>  -->
+                <p class="ml9"> 
                     <span class="text-wrapper">
                     <span class="letters">GAME WORLD </span>
                     </span>
-                 </p> -->
+                 </p> 
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Let's go</a>
             </div>
         </header>
@@ -87,7 +104,12 @@ session_start();
         <section class="page-section" id="Options">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Options</h2>
+                    <!-- <h2 class="section-heading text-uppercase">Options</h2> -->
+                    <h2 class="ml8"> 
+                        <span class="text-wrapper">
+                            <span class="letters">Options </span>
+                        </span>
+                    </h2> 
                     <h3 class="section-subheading text-muted">Have a look !</h3>
                 </div>
                 <div class="row text-center">
@@ -131,7 +153,12 @@ session_start();
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Games</h2>
+                    <!-- <h2 class="section-heading text-uppercase">Games</h2> -->
+                    <h2 class="ml7"> 
+                        <span class="text-wrapper">
+                            <span class="letters">Games </span>
+                        </span>
+                    </h2> 
                     <h3 class="section-subheading text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there were few games.</h3>
                 </div>
                 <div class="row">
@@ -385,7 +412,12 @@ session_start();
         <section class="page-section" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <!-- <h2 class="section-heading text-uppercase">Our Amazing Team</h2> -->
+                    <h2 class="ml6"> 
+                        <span class="text-wrapper">
+                            <span class="letters">Our Amazing Team </span>
+                        </span>
+                    </h2> 
                     <h3 class="section-subheading text-muted">Simple but Significant</h3>
                 </div>
                 <div class="row">
@@ -431,7 +463,12 @@ session_start();
         <section class="page-section" id="contact1">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <!-- <h2 class="section-heading text-uppercase">Contact Us</h2> -->
+                    <h2 class="ml5"> 
+                        <span class="text-wrapper">
+                            <span class="letters">Contact Us </span>
+                        </span>
+                    </h2>
                     <h3 class="section-subheading text-muted">What do you think ??</h3>
                 </div>
                 <form id="contact1Form" name="sentMessage" novalidate="novalidate" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -923,8 +960,8 @@ session_start();
                 </div>
             </div>
         </div>
-        <script src="anime.min.js" ></script>
-        <script src="animateword.js" ></script>
+        <script src="js/anime.min.js" ></script>
+        <script src="js/animateword.js" ></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
