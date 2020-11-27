@@ -44,16 +44,18 @@ session_start();
     </head>
     <body id="page-top">
 
-    <!-- <div id="loader" class="loading">
+     <!-- <div id="loader" class="loading">
        <div class="loading-logo"><img src="assets/img/game-world.png" class="logo"></div>
-   </div> -->
+   </div>  -->
 
 
 
         <!-- Navigation-->
-         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+                
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="" alt="" />Game World</a>
+              <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="" alt="" />Game World</a> 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -65,52 +67,42 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact1">Feedback</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
                 </div>
                 <a class="navbar-brand js-scroll-trigger" href=""><img src="assets/img/img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a>
             </div>
-        </nav> 
+        </nav>    
 
-        <!-- <div class="contentFixed">
-       <header class="header">
-           <h1 class="headerTitle"><img 
-            src="assets/img/game-world.png" class="logo"> Game World</h1>
-       </header>
-       <nav class="menu" id="siteNav">
-           <ul>
-               <li><a href="#Options">Options</a></li>
-               <li><a href="#portfolio">Games</a></li>
-               <li><a href="#">Dashboard</a></li>
-               <li><a href="#team">Team</a></li>
-               <li><a href="reviews.php">Reviews</a></li>
-           </ul>
-       </nav>
-   </div> -->
+      
 
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Game Set and Match !</div>
-                 <!-- <div class="masthead-heading text-uppercase">Game World</div>  -->
-                <p class="ml9"> 
-                    <span class="text-wrapper">
-                    <span class="letters">GAME WORLD </span>
-                    </span>
-                 </p> 
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#portfolio">Let's go</a>
-            </div>
-        </header>
+        <div id="loader" class="loading">
+        <div class="loading-logo"></div>
+        </div>
+   
+    <div class="content">
+        <div class="glitch">
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+        </div>
+        <div class="contentSection">
+            <h2 class="contentTitle">Game<span>World</span></h2>
+            <p class="contentText">Game Set and Match !</p>
+             </div>
+    </div>
+
         <!-- Services-->
         <section class="page-section" id="Options">
             <div class="container">
                 <div class="text-center">
                     <!-- <h2 class="section-heading text-uppercase">Options</h2> -->
-                    <h2 class="ml8"> 
+                    <p class="ml8"> 
                         <span class="text-wrapper">
                             <span class="letters">Options </span>
                         </span>
-                    </h2> 
+                    </p> 
                     <h3 class="section-subheading text-muted">Have a look !</h3>
                 </div>
                 <div class="row text-center">
@@ -155,11 +147,11 @@ session_start();
             <div class="container">
                 <div class="text-center">
                     <!-- <h2 class="section-heading text-uppercase">Games</h2> -->
-                    <h2 class="ml7"> 
+                    <p class="ml7"> 
                         <span class="text-wrapper">
                             <span class="letters">Games </span>
                         </span>
-                    </h2> 
+</p> 
                     <h3 class="section-subheading text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there were few games.</h3>
                 </div>
                 <div class="row">
@@ -414,11 +406,11 @@ session_start();
             <div class="container">
                 <div class="text-center">
                     <!-- <h2 class="section-heading text-uppercase">Our Amazing Team</h2> -->
-                    <h2 class="ml6"> 
+                    <p class="ml6"> 
                         <span class="text-wrapper">
                             <span class="letters">Our Amazing Team </span>
                         </span>
-                    </h2> 
+</p> 
                     <h3 class="section-subheading text-muted">Simple but Significant</h3>
                 </div>
                 <div class="row">
@@ -465,11 +457,11 @@ session_start();
             <div class="container">
                 <div class="text-center">
                     <!-- <h2 class="section-heading text-uppercase">Contact Us</h2> -->
-                    <h2 class="ml5"> 
+                    <p class="ml5"> 
                         <span class="text-wrapper">
                             <span class="letters">Feedback </span>
                         </span>
-                    </h2>
+</p>
                     <h3 class="section-subheading text-muted">What do you think ??</h3>
                 </div>
                 <form id="contact1Form" name="sentMessage" novalidate="novalidate" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -598,7 +590,7 @@ session_start();
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Checkers</h2>
                                     <p class="item-intro text-muted">Checking mind</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/checkers.png" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/checkers.PNG" alt="" />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
@@ -606,8 +598,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
-                                    </button>
+                                        Close Game                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -635,7 +626,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -664,7 +655,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -693,7 +684,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -715,14 +706,14 @@ session_start();
                                     <h2 class="text-uppercase">Space Shooter</h2>
                                     <p class="item-intro text-muted">phew phew phew !</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/space.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p>Welcome to Space Shooter Game! use the keys to move your spaceship. Collect as many coins as possible a get +20 score and shoot the bombs by click of the mouse to get +10 score. Avoid get hitting by the Bomb. Happy Playing!! </p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/originalspace-shooter/index.html" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -751,7 +742,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -774,12 +765,9 @@ session_start();
                                     <p class="item-intro text-muted">Who will win ???</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/dice.PNG" alt="" />
                                     <p>This is a simple casino-style game
-                                        All you have to do is roll the dice and try to reach 100 points faster than your opponent player.
+                                        
                                         GAME RULES:
-
-                                        - The game has 2 players, playing in rounds
-                                        - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
-                                        - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
+                                        - if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
                                         - The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. 
                                         After that, it's the next player's turn
                                         - The first player to reach 100 points on GLOBAL score wins the game
@@ -790,7 +778,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -811,10 +799,8 @@ session_start();
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">MYTeam11 Cricket</h2>
                                     <p class="item-intro text-muted">Let's play a game</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3-thumbnail.jpg" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
                                     <p>This Game will make the user select the team and also gets the points in winning teams.
-                                        Admin will select the country which will play the match. 
-                                        continuously, select the day for the match. 
                                         Firstly, users need to register to the system and then they can log in to the system by entering the username and password.
                                         Users will select the team for them and submit it. 
                                         They can even change the details of their own. Such as username, password, etc.
@@ -825,7 +811,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -854,7 +840,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -879,10 +865,7 @@ session_start();
                                     <p>This game is an interesting addictive fun game. 
                                         Here, the player has to hit the layers of bricks with the small moving ball and destroy them. 
                                         The ball moves straight around the screen by bouncing off the top and two sides of the screen. 
-                                        When a brick is hit, it is destroyed and the ball bounces back. 
-                                        The player loses a turn when the ball touches the bottom of the screen. 
-                                        Then you can start a new game just after the failure. 
-                                        To prevent from losing, the player has a horizontally movable paddle to bounce the ball upward, keeping it in play.
+                                       
                                         You just have to use the cursor to move the paddle horizontally as per your requirement.</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
@@ -890,7 +873,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -911,7 +894,7 @@ session_start();
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Quiz</h2>
                                     <p class="item-intro text-muted">Test your knowledge..</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/quiz.PNG" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-thumbnail.jpg" alt="" />
                                     <p>Answer the pop quiz and test your knowledge!!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
@@ -919,7 +902,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -943,8 +926,6 @@ session_start();
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/speed.PNG" alt="" />
                                     <p>This game helps you to improve your Typing speed.  
                                         You just have to type those provided texts without making any mistakes in the field given. 
-                                        Also, when you make mistakes the wrong letters in the word will turn into red and the background keeps on changing itself.
-                                        You can start your typing by clicking the start button and also can stop it before completion of the task..
                                     </p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
@@ -952,7 +933,7 @@ session_start();
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Close Game
                                     </button>
                                 </div>
                             </div>
@@ -963,6 +944,18 @@ session_start();
         </div>
         <script src="js/anime.min.js" ></script>
         <script src="js/animateword.js" ></script>
+        <script>
+       var loader = document.getElementById('loader');
+       window.addEventListener("load", 
+        function(event) {
+                loader.classList.
+        remove('loading');
+                loader.classList.add('loaded');
+                document.body.classList.
+        add('imgloaded');
+            });
+    </script>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -974,4 +967,5 @@ session_start();
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
+    
 </html>
