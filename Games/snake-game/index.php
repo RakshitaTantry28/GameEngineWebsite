@@ -13,7 +13,9 @@
 	<div id="info">
 		<h1><center>Snake Game</center></h1>
 		Speed: <input type="number" id="gameSpeed" value="5" min="1" max="9" step="1" />
-  		<input type="button" value="Start" id="gameStart" /><br>
+		  <input type="button" value="Start" id="gameStart" /><br>
+		  
+		  
   		Score: <span id="score"></span>
 	</div>
 	<div id="screen">
@@ -21,10 +23,31 @@
   		<script src="app.js"></script>
 	</div>
 
-  <?php 
-    echo "hellow".$_COOKIE["score"]; 
-  ?>
+
+	<div id ="right">
+
+		<form method="POST" action="<?php $_SERVER['SELF_PHP']; ?>">
+			<span id="sc"></span>
+			<input type="button" value="EXIT" id="Exit"  name='exit'/>
+		</form>
+
+	</div>
+
+
 
 </body>
 
 </html>
+
+
+<?php
+
+include '../../session.php';
+
+$conn = mysqli_connect('localhost','root','','wdl');
+
+
+
+
+
+?>

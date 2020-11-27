@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 26, 2020 at 05:06 PM
+-- Generation Time: Nov 27, 2020 at 09:28 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -20,6 +20,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `wdl`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dashboard`
+--
+
+CREATE TABLE `dashboard` (
+  `username` varchar(100) NOT NULL,
+  `snake_game` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -51,7 +62,6 @@ INSERT INTO `reviews` (`name`, `email`, `phone_no`, `review`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(10) NOT NULL
@@ -61,29 +71,21 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `username`, `password`) VALUES
-(1, 'nikita', 'nikita_sarode', '123456'),
-(2, 'Nidhi', 'nidhi_vanjare', '123456');
+INSERT INTO `users` (`name`, `username`, `password`) VALUES
+('nikita', 'nikita_sarode', '123456'),
+('Nidhi', 'nidhi_vanjare', '123456'),
+('Nidhi V', 'nidhi_v', '123456'),
+('Rakshita', 'rak', '123');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `users`
+-- Indexes for table `dashboard`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `dashboard`
+  ADD PRIMARY KEY (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

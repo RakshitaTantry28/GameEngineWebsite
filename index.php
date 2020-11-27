@@ -64,10 +64,11 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Games</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="reviews.php">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact1">Feedback</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
                 </div>
-                <a class="navbar-brand js-scroll-trigger" href=""><img src="img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a>
+                <a class="navbar-brand js-scroll-trigger" href=""><img src="assets/img/img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a>
             </div>
         </nav> 
 
@@ -140,8 +141,8 @@ session_start();
                             <i class="fas fa-comments fa-stack-1x fa-inverse"></i>
                         </span>
                         </a>
-                        <h4 class="my-3"><a href="reviews.php">Reviews</a></h4>
-                        <p class="text-muted">Let us know your views...</p>
+                        <h4 class="my-3"><a href="reviews.php">Our Reviews</a></h4>
+                        <p class="text-muted">Know the Feedback from our fellow users!</p>
                     </div>
                 </div>
             </div>
@@ -466,7 +467,7 @@ session_start();
                     <!-- <h2 class="section-heading text-uppercase">Contact Us</h2> -->
                     <h2 class="ml5"> 
                         <span class="text-wrapper">
-                            <span class="letters">Contact Us </span>
+                            <span class="letters">Feedback </span>
                         </span>
                     </h2>
                     <h3 class="section-subheading text-muted">What do you think ??</h3>
