@@ -87,7 +87,7 @@ session_start();
         <section >
 
 
-            <center><h1 style="color:#1e88e5">REVIEWS</h1></center>
+            <center><h1 style="color:cyan">REVIEWS</h1></center>
 
         <?php
 

@@ -123,7 +123,7 @@ session_start();
                             <i class="fas fa-rocket fa-stack-1x fa-inverse"></i>
                         </span>
                         </a>
-                        <h4 class="my-3"><a href="#portfolio" class="text-primary">Play</a></h4>
+                        <h4 class="my-3"><a href="#portfolio" >Play</a></h4>
                         <p class="text-muted">Hello Champ ! Get your hands ready for the game !!</p>
                     </div>
                     <div class="col-md-4">
