@@ -75,7 +75,8 @@ if (isset($_POST['submit'])) {
 	<section class="page-section">
 		<div class="container">
             <div class="text-center">
-				<h1 class="section-heading text-uppercase text-center text-primary">Game World</h1>
+                <!-- <h1 class="section-heading text-uppercase text-center text-primary">Game World</h1> -->
+                <h2 class="C2Title">Game<span>World</span></h2>
                 <h2 class="section-heading text-uppercase text-white">Register</h2>
 			</div>
 			<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">

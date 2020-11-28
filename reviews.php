@@ -64,7 +64,7 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#portfolio">Games</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Reviews</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#contact1">Feedback</a></li>
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
                     </ul>
                 </div>
@@ -75,8 +75,9 @@ session_start();
             <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Game Set and Match !</div>
-                <div class="masthead-heading text-uppercase">Game World</div>
+                <!-- <div class="masthead-subheading">Game Set and Match !</div>
+                <div class="masthead-heading text-uppercase">Game World</div> -->
+                <h2 class="contentTitle">Game<span>World</span></h2>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="index.php#portfolio">Let's go</a>
             </div>
         </header>

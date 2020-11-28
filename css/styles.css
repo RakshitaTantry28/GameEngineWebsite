@@ -16,6 +16,27 @@
  light - 03a9f4*/
 
 
+ .CTitle {
+  color: white;
+  font-size: 6vw;
+  font-family: 'Playfair Display', serif;
+  animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+.CTitle span {
+  /* color: var(--color-link-hover); */
+  color: cyan;
+}
+.C2Title {
+  color: white;
+  font-size: 5vw;
+  font-family: 'Playfair Display', serif;
+  animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+.C2Title span {
+  /* color: var(--color-link-hover); */
+  color: cyan;
+}
+
  .ml8 { 
   line-height: 3.25rem !important;
   margin-bottom: 2rem !important; 
@@ -757,21 +778,23 @@ sup {
 }
 
 a {
-  color: #1ed8e5;
+  color: rgb(4, 148, 148);
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #003991;
+  color: #202020;
   text-decoration: underline;
 }
 
 a:not([href]):not([class]) {
-  color: inherit;
+  /* color: inherit; */
+  color: #202020;
   text-decoration: none;
 }
 a:not([href]):not([class]):hover {
-  color: inherit;
+  /* color: inherit; */
+  color: #202020;
   text-decoration: none;
 }
 
@@ -3046,9 +3069,9 @@ fieldset:disabled a.btn {
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #003991;
-  border-color: #101cee;
-  box-shadow: 0 0 0 0.2rem #003991;
+  background-color: #04a3a1;
+  border-color: #03e6f7;
+  box-shadow: 0 0 0 0.2rem #003b3f;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
@@ -4370,7 +4393,7 @@ input[type=button].btn-block {
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #1e88e5;
+  background-color: #04b5bb;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -10379,7 +10402,7 @@ button.bg-dark:focus {
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #003991 !important;
+  color: #065b68 !important;
 }
 
 .text-secondary {
@@ -10411,7 +10434,7 @@ a.text-info:hover, a.text-info:focus {
 }
 
 a.text-warning:hover, a.text-warning:focus {
-  color: #003991 !important;
+  color: #09b1c7 !important;
 }
 
 .text-danger {
@@ -10589,7 +10612,7 @@ p {
   padding: 6rem 0;
 }
 .page-section h2.section-heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -10656,7 +10679,7 @@ img::-moz-selection {
   font-size: 0.75rem;
   color: #fff;
   text-transform: uppercase;
-  background-color: #1e88e5;
+  background-color: #045555;
   border: 0;
 }
 #mainNav .navbar-brand {
