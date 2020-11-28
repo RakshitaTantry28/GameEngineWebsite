@@ -88,7 +88,14 @@ session_start();
         <section >
 
 
-            <center><h1 style="color:cyan">REVIEWS</h1></center>
+        <div class="text-center">
+                    <!-- <h2 class="section-heading text-uppercase">Options</h2> -->
+                    <p class="ml8"> 
+                        <span class="text-wrapper">
+                            <span class="letters">REVIEWS </span>
+                        </span>
+                    </p> 
+                </div>
 
         <?php
 
@@ -167,6 +174,8 @@ session_start();
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/animateworld.js" >
+        <script src="js/anime.min.js" >
 
     </body>
 </html>

@@ -16,6 +16,13 @@
  light - 03a9f4*/
 
 
+ /* cyan shades
+  light - #bbffff;
+  medium - #00d6d6
+  dark - rgb(33, 37, 41);
+ */
+
+
  .CTitle {
   color: white;
   font-size: 6vw;
@@ -683,7 +690,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: cyan;
+  color: #212529;;
   text-align: left;
   background-color: #fff;
   }
@@ -778,23 +785,23 @@ sup {
 }
 
 a {
-  color: rgb(4, 148, 148);
+  color: #00d6d6;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #202020;
+  color: #02adad;
   text-decoration: underline;
 }
 
 a:not([href]):not([class]) {
   /* color: inherit; */
-  color: #202020;
+  color: #02adad;
   text-decoration: none;
 }
 a:not([href]):not([class]):hover {
   /* color: inherit; */
-  color: #202020;
+  color: #02adad;
   text-decoration: none;
 }
 
@@ -6696,7 +6703,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: cyan !important;
+  background-color: #bbffff !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6733,7 +6740,7 @@ a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 
 button.bg-info:focus {
-  background-color: cyan !important;
+  background-color: #bbffff !important;
 }
 
 .bg-warning {
@@ -6757,7 +6764,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: cyan;
+  background-color: #bbffff;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -10431,8 +10438,7 @@ a.text-info:hover, a.text-info:focus {
 }
 
 .text-warning {
-  color: cyan
-   !important;
+  color: #bbffff!important;
 }
 
 a.text-warning:hover, a.text-warning:focus {
@@ -10444,7 +10450,7 @@ a.text-warning:hover, a.text-warning:focus {
 }
 
 a.text-danger:hover, a.text-danger:focus {
-  color: cyan !important;
+  color: #bbffff !important;
 }
 
 .text-light {
@@ -11059,5 +11065,4 @@ header.masthead .masthead-heading {
 
 a:hover{
   text-decoration: none;
-  color: #003991;
 }
