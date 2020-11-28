@@ -507,10 +507,6 @@ session_start();
         $number =  $_POST['phone'];
         $review = $_POST['message'];
 
-        echo "$name";
-
-
-
         $query = "insert into reviews values('$name','$email','$number','$review')";
 
         $result1 = mysqli_query($conn,$query);
@@ -518,7 +514,6 @@ session_start();
         if(!$result1)
         {
             echo "<script>alert('Try Again !');</script>";
-            echo "$name";
         }
         else
         {
