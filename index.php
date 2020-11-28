@@ -149,7 +149,7 @@ session_start();
                     <!-- <h2 class="section-heading text-uppercase">Games</h2> -->
                     <p class="ml7"> 
                         <span class="text-wrapper">
-                            <span class="letters">Games </span>
+                            <span class="letters">Games</span>
                         </span>
 </p> 
                     <h3 class="section-subheading text-muted">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there were few games.</h3>
