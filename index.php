@@ -8,6 +8,7 @@ session_start();
    if(!isset($_SESSION['user']))
    {
     $_SESSION['indexuser'] = "guest";
+    $_SESSION['log'] = "login";
    }
    else{
     $user_check = $_SESSION['user'];
@@ -18,6 +19,7 @@ session_start();
     
     $login_session = $row['username'];
     $_SESSION['indexuser'] = $_SESSION['user'];
+    $_SESSION['log'] = "logout";
    }
 
 ?>
@@ -41,6 +43,44 @@ session_start();
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/reviews.css">
+        <style>
+            li a, .dropbtn, input {
+                display: inline-block;
+                color: white;
+                text-decoration: none;
+            }
+
+            li.dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: transparent;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a, input {
+                color: #fff;
+                background-color: transparent;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: center;
+            }
+
+            .dropdown-content input:hover {
+                background-color: #ffffff30;
+                color: #bbffff;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
     </head>
     <body id="page-top">
 
@@ -67,9 +107,29 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact1">Feedback</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger dropbtn" href="javascript:void(0)"><?php echo $_SESSION['indexuser'];?></a>
+                            <div class="dropdown-content">
+                            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+                                <input type="submit" name="log" value="<?php echo $_SESSION['log']; ?>" />
+                            </form>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <a class="navbar-brand js-scroll-trigger" href=""><img src="assets/img/img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a>
+                
+                <?php
+
+                    if(isset($_POST['log'])){
+                        if($_SESSION['log'] == "login"){
+                            header('location:login.php');
+                        }else{
+                            header('location:logout.php');
+                        }
+                    }
+
+                ?>
+
+                <!-- <a class="navbar-brand js-scroll-trigger dropbtn" href="javascript:void(0)"><img src="assets/img/img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a></li> -->
             </div>
         </nav>    
 
