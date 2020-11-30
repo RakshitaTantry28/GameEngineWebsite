@@ -11,12 +11,17 @@ if (isset($_POST['submit'])) {
         $query = "select * from users where username = '$username' && password ='$pass'";
         $result = mysqli_query($conn,$query);
 
-        if (!$result) {
+
+        $count = mysqli_num_rows($result);
+
+        if (!($count == 1)){
             echo "<script>alert('Try again');</script>";
+            
         }else{
             session_start();
             $_SESSION['user'] = $username;
             header('location:index.php');
+            
         }
     }
 }
@@ -73,7 +78,7 @@ if (isset($_POST['submit'])) {
                             <input class="form-control" name="username" type="text" placeholder="Your username *" required="required" data-validation-required-message="Please enter your username." />
                             </div>
                         <div class="form-group">
-                            <input class="form-control" name="pass" type="text" placeholder="Your Password *" required="required" data-validation-required-message="Please enter your password." />
+                            <input class="form-control" name="pass" type="password" placeholder="Your Password *" required="required" data-validation-required-message="Please enter your password." />
                         </div>
                         <div class="text-center">
                         	<button class="btn btn-primary btn-xl text-uppercase" name="submit" type="submit">Login</button>

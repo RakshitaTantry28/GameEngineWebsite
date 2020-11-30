@@ -11,18 +11,22 @@ session_start();
     $_SESSION['log'] = "login";
    }
    else{
-    $user_check = $_SESSION['user'];
-   
-    $result = mysqli_query($conn,"select username from users where username = '$user_check' ");
     
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    
-    $login_session = $row['username'];
     $_SESSION['indexuser'] = $_SESSION['user'];
     $_SESSION['log'] = "logout";
    }
 
-?>
+if(isset($_POST['log'])){
+        if($_SESSION['log'] == "login"){
+            header('location:login.php');
+                }
+        else{
+            header('location:logout.php');
+             }
+    }
+
+                ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,44 +47,7 @@ session_start();
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="css/reviews.css">
-        <style>
-            li a, .dropbtn, input {
-                display: inline-block;
-                color: white;
-                text-decoration: none;
-            }
-
-            li.dropdown {
-                display: inline-block;
-            }
-
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: transparent;
-                min-width: 160px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1;
-            }
-
-            .dropdown-content a, input {
-                color: #fff;
-                background-color: transparent;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: center;
-            }
-
-            .dropdown-content input:hover {
-                background-color: #ffffff30;
-                color: #bbffff;
-            }
-
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
-        </style>
+        
     </head>
     <body id="page-top">
 
@@ -109,7 +76,9 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact1">Feedback</a></li>
                         <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger dropbtn" href="javascript:void(0)"><?php echo $_SESSION['indexuser'];?></a>
                             <div class="dropdown-content">
-                            <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+
+                    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+
                                 <input type="submit" name="log" value="<?php echo $_SESSION['log']; ?>" />
                             </form>
                             </div>
@@ -117,18 +86,7 @@ session_start();
                     </ul>
                 </div>
                 
-                <?php
-
-                    if(isset($_POST['log'])){
-                        if($_SESSION['log'] == "login"){
-                            header('location:login.php');
-                        }else{
-                            header('location:logout.php');
-                        }
-                    }
-
-                ?>
-
+                
                 <!-- <a class="navbar-brand js-scroll-trigger dropbtn" href="javascript:void(0)"><img src="assets/img/img.jpg" height="5" alt="" style="margin-left: 30px; margin-right:7px" /><?php echo $_SESSION['indexuser'];?></a></li> -->
             </div>
         </nav>    
@@ -489,7 +447,7 @@ session_start();
                             <img class="mx-auto rounded-circle" src="assets/img/team/Rakshita.jpg" alt="" />
                             <h4>Rakshita Tantry</h4>
                             <p class="text-muted">Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="mailto:28rakshi@gmail.com"><i class="fa fa-envelope" ></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://github.com/RakshitaTantry28"><i class="fab fa-github"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/rakshita-tantry/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
@@ -499,7 +457,7 @@ session_start();
                             <img class="mx-auto rounded-circle" src="assets/img/team/nidhi.png" alt="" />
                             <h4>Nidhi Vanjare</h4>
                             <p class="text-muted">Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/Nidhi_vanjare"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/Nidhi_vanjare"><i class="fab fa-twitter" ></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://github.com/nidhivanjare"><i class="fab fa-github"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/nidhi-vanjare-368b501a4/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
