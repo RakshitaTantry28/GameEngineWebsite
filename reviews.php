@@ -1,10 +1,14 @@
 <?php
 
+
+
 $conn = mysqli_connect('localhost','root','','wdl');
 session_start();
    
-   if(!isset($_SESSION['user'])){
+   if(!isset($_SESSION['user']))
+   {
     $_SESSION['indexuser'] = "guest";
+    $_SESSION['log'] = "login";
    }
    else{
     $user_check = $_SESSION['user'];
@@ -15,13 +19,21 @@ session_start();
     
     $login_session = $row['username'];
     $_SESSION['indexuser'] = $_SESSION['user'];
-
+    $_SESSION['log'] = "logout";
    }
 
 
 
+    if(isset($_POST['log'])){
+        if($_SESSION['log'] == "login"){
+            header('location:login.php');
+                }
+        else{
+            header('location:logout.php');
+             }
+    }
 
-?>
+                ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,21 +78,39 @@ session_start();
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php#contact1">Feedback</a></li>
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" class="text-danger"></li> -->
+                        <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger dropbtn" href="javascript:void(0)"><?php echo $_SESSION['indexuser'];?></a>
+                            <div class="dropdown-content">
+
+                    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+
+                                <input type="submit" name="log" value="<?php echo $_SESSION['log']; ?>" />
+                            </form>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <a class="navbar-brand js-scroll-trigger" href=""><img src="" alt="" style="margin-left: 20px" /><?php if($_SESSION['user']){ echo $_SESSION['user'];}else{ echo "Guest";} ?></a>
+    
             </div>
         </nav>
 
             <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <!-- <div class="masthead-subheading">Game Set and Match !</div>
-                <div class="masthead-heading text-uppercase">Game World</div> -->
-                <h2 class="contentTitle">Game<span>World</span></h2>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="index.php#portfolio">Let's go</a>
+            <div id="loader" class="loading">
+        <div class="loading-logo"></div>
+        </div>
+   
+    <div class="content">
+        <div class="glitch">
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+        </div>
+        <div class="contentSection">
+            <h2 class="contentTitle">Game<span>World</span></h2>
+            <p class="contentText">Game Set and Match !</p>
             </div>
-        </header>
+    </div>>
 
 
 
@@ -164,6 +194,20 @@ session_start();
         </footer>
 
 
+        <script src="js/anime.min.js" ></script>
+        <script src="js/animateword.js" ></script>
+        <script>
+       var loader = document.getElementById('loader');
+       window.addEventListener("load", 
+        function(event) {
+                loader.classList.
+        remove('loading');
+                loader.classList.add('loaded');
+                document.body.classList.
+        add('imgloaded');
+            });
+    </script>
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -173,9 +217,8 @@ session_start();
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="js/animateworld.js" >
-        <script src="js/anime.min.js" >
+        <script src="js/scripts.js">
+    </script>
 
     </body>
 </html>

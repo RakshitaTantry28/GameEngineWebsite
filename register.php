@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
                             <input class="form-control" name="username" type="text" placeholder="Your Username *" required="required" data-validation-required-message="Please enter your name." />
                         </div>
                         <div class="form-group">
-                            <input class="form-control" name="password" type="text" placeholder="Your Password *" required="required" data-validation-required-message="Please enter your password." />
+                            <input class="form-control" name="password" type="password" placeholder="Your Password *" required="required" data-validation-required-message="Please enter your password." />
                         </div>
                         <div class="text-center">
                         	<button class="btn btn-primary btn-xl text-uppercase" name="submit" type="submit">Register</button>
