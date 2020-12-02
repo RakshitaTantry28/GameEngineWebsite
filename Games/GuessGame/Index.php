@@ -9,7 +9,7 @@ require_once('logic.php');
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
           <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
     </head>
-    <body class="container">
+    <body>
     <marquee direction="left" style="background-color:#18907b;color:white;padding:1px;font-size:17px">Welcome, Try your luck by guessing the right switch! Have fun!!</marquee>
         <div>
         <div class="title text-center">
@@ -22,7 +22,9 @@ require_once('logic.php');
         <div class="scoreboard text-center">
             Current Level: <span id="mylevel"><?php echo $_SESSION['level']; ?></span>
             Your Score: <span id="myscore"><?php echo $_SESSION['score']; ?></span>
-        </div>
+        </div><br>
+         <!-- <centre><button class="button1">Exit Game</button></centre>  -->
+         <center><a href="../../index.php" style="color: #18907b;">EXIT GAME!</a></center> 
         <div>
         <?php for($i = 0; $i< $switches; $i++){ ?>
             <div class="cube-switch" onclick="clickswitch(this,<?php echo $i ?>)">
@@ -34,12 +36,15 @@ require_once('logic.php');
         <?php } ?>
         
         </div>
+        
         <div id="gameover" style="display:none;cursor: pointer;" onclick="javascript:window.location.reload();">
             <span style="color: #f31515;">Game Over </span>
             <a href=""><span class=reload>&#x21bb;</span></a>
         </div>
         </div>
+        
     </body>
+    
     <script>
         function clickswitch(ele, guessVal){
             if ($(ele).hasClass('active')) {
@@ -78,4 +83,5 @@ require_once('logic.php');
             }
         }
     </script>
+  
 </html>

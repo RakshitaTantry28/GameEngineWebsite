@@ -92,6 +92,17 @@ body, .qoute-input{
     color:white;
     background-color: green;
 }
+#btnexit{
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 20px;
+}
+#btnexit:hover{
+    border: 2px solid green;
+    border-radius: 20px;
+    color:white;
+    background-color: green;
+}
 
 
 .correct{

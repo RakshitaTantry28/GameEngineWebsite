@@ -693,7 +693,7 @@ if(isset($_POST['log'])){
                                     <p>The game is all about guessing the right switch! Game has total 6 levels !! In every level you will get 3 attempts to guess !!! Points will be assigned based on the number of attempts you took to guess</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/GuessGame/index.php" class="text-white">Start Game</a>
+                                        <a href="Games/GuessGame/Index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -751,7 +751,7 @@ if(isset($_POST['log'])){
                                     <p>The player controls a dot, square, or object on a bordered plane. As it moves forward, it leaves a trail behind, resembling a moving snake. In some games, the end of the trail is in a fixed position, so the snake continually gets longer as it moves. </p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/snake-game/index.html" class="text-white">Start Game</a>
+                                        <a href="Games/snake-game/index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
