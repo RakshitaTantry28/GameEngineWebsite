@@ -12,10 +12,16 @@ if (isset($_POST['submit'])) {
         $password1 = $_POST['password'];
 
         $query = 'select * from users where username = "$username1"';
+        $query2 = 'select * from users where password = "$password1"';
         $result = mysqli_query($conn,$query);
+        $result1 = mysqli_query($conn,$query2);
 
         if (mysqli_fetch_row($result) == 1) {
             echo "username exists";
+        }
+
+        else if (mysqli_fetch_row($result1) == 1) {
+            echo "This Password is taken";
         }
         else
         {
@@ -42,6 +48,7 @@ if (isset($_POST['submit'])) {
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<title>Game World | login</title>
+    <script src="validation.js"></script>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
@@ -79,7 +86,7 @@ if (isset($_POST['submit'])) {
                 <h2 class="C2Title">Game<span>World</span></h2>
                 <h2 class="section-heading text-uppercase text-white">Register</h2>
 			</div>
-			<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+			<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" name="registration_form" onsubmit="return validateform()">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-12">
                         <div class="form-group">
