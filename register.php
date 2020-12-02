@@ -2,6 +2,7 @@
 
 if (isset($_POST['submit'])) {
     $conn = mysqli_connect('localhost','root','','wdl');
+
     if ($conn->connect_error) {
         die('connection error'.$conn->connect_error);
     }
@@ -38,6 +39,33 @@ if (isset($_POST['submit'])) {
             }
         }
     }
+
+    $hostname="localhost"; 		//hostname
+    $username="root"; 			//username for database
+    $password=""; 				//database password
+    $dbname="my11"; 		//database name
+    $connect=mysqli_connect($hostname,$username,$password,$dbname) or die("Error Connecting ".  mysqli_connect_error()); 		//make connection
+    $uname = $_POST['username'];
+    $password = $_POST['password'];
+
+    $q="select * from users where uname='$uname'";
+
+    $result=mysqli_query($connect,$q);
+
+
+    $num=mysqli_num_rows($result);
+
+    if($num == 1){
+    echo " Duplicate data";
+    header("Refresh:1; url=index.php");
+    }
+    else{
+    $qy="INSERT INTO users (id,uname, password,points,rank) VALUES(NULL,'$uname', '$password',0,0)";
+    if(mysqli_query($connect,$qy)){
+    echo "success";}
+    header("Refresh:1; url=index.php");
+    }
+
 }
 
 ?>

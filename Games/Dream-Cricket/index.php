@@ -18,7 +18,7 @@
     <body>
     <div id="mainimg">
         <div id="logo">MYTeam11</div>
-        <input id="register" class="gobutton" type="button" value="Register & play" onclick="homereg()">
+        <!-- <input id="register" class="gobutton" type="button" value="Register & play" onclick="homereg()"> -->
         <div id="head"><br>PLAY MYTeam11 CRICKET</div>
         <input id="gobut" class="gobutton" type="button" value="Let's Play" onclick="homelog()">
     </div>    
@@ -50,7 +50,7 @@
             </form>
           </div>
           
-          <div id="homereg" class="modal">
+          <!-- <div id="homereg" class="modal">
                 <form class="modal-content animate" action="register.php" method="post" name="registration_form" onsubmit="return validateform()">
                 <div class="closecontainer"> 
                       <span onclick="closereg()" class="close" title="Close Modal">&times;</span>
@@ -78,7 +78,7 @@
                     </div>
                   </div>
                 </form>
-              </div>
+              </div> -->
 
 </body>    
 </html>    

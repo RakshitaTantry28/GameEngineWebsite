@@ -20,7 +20,6 @@ else
     session_start();
     $_SESSION['id'] = $row_users['id'];
     $_SESSION['uname'] = $row_users['uname'];
-    $_SESSION['email'] = $row_users['email'];
     $_SESSION['points'] = $row_users['points'];
     
     //ranking
