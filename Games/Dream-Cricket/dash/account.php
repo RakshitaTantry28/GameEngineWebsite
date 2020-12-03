@@ -38,17 +38,13 @@ if(!$_SESSION['uname']){
         $res=mysqli_query($connect,$q);
         $row=mysqli_fetch_array($res);
         $name=$row['uname'];
-        $email=$row['email'];
+
 
         ?>
         <div class='accountupdate'>
         <form action="update.php" method="post" name="registration_form" onsubmit="return validateform()">
                     <label for="uname"><b>Username:</b></label><br>
                     <input type="text" placeholder="<?php echo $name; ?>" name="uname" required>
-                    <br>
-
-                    <label for="text"><b>Email:</b></label><br>
-                    <input type="email" placeholder="<?php echo $email; ?>" name="email" required>
                     <br>
 
                     <label for="psw"><b>Password:</b></label><br>

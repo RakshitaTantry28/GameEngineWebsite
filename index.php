@@ -2,7 +2,7 @@
 
 
 
-$conn = mysqli_connect('localhost','root','','wdl');
+$conn = mysqli_connect('localhost','root','root','wdl');
 session_start();
    
    if(!isset($_SESSION['user']))
@@ -517,7 +517,7 @@ if(isset($_POST['log'])){
         <?php
 
                 //saving reviews
-        $conn = mysqli_connect('localhost','root','','wdl');
+        $conn = mysqli_connect('localhost','root','root','wdl');
         if(isset($_POST['submit'])) {
 
         $name = $_POST['name'];
@@ -698,7 +698,7 @@ if(isset($_POST['log'])){
                                     <p>The game is all about guessing the right switch! Game has total 6 levels !! In every level you will get 3 attempts to guess !!! Points will be assigned based on the number of attempts you took to guess</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/GuessGame/index.php" class="text-white">Start Game</a>
+                                        <a href="Games/GuessGame/Index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>

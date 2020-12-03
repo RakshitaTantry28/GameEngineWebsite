@@ -5,7 +5,7 @@ const quoteAuthorElement = document.getElementById("quoteAuthor")
 const quoteInputElement = document.getElementById("quoteInput")
 const timerElement = document.getElementById("timer")
 const btnNextElement = document.getElementById("btnNext")
-
+const btnExitElement = document.getElementById("btnexit")
 let myTime
 let totalKeysPress = 0
 let correctKeysPress

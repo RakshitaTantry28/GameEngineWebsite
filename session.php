@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','wdl');
+$conn = mysqli_connect('localhost','root','root','wdl');
 session_start();
    
    $user_check = $_SESSION['user'];
