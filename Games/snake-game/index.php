@@ -25,6 +25,8 @@ include "session.php"
 		  <form name="score" method="POST" action="<?php $_SERVER['SELF_PHP']; ?>">
 			<input type="hidden" id="sc" name="btnClickedValue" value="" /></br>
 			<input type = "hidden" value = "Save score" name="submit" id="submit" />
+
+			<input type="button" name="EXIT" value="EXIT" onclick="window.location.href='../../index.php'"/>
 		</form>
 
 	</div>
@@ -49,6 +51,7 @@ if(isset($_POST['submit'])){
     else{
 		$score = $_POST['btnClickedValue'];
 		$uname = $_SESSION['user'];
+		echo $uname;
 
 		$sql = "select snake_game from dashboard where username = '$uname';";
 		$result = mysqli_query($conn,$sql);
@@ -60,12 +63,16 @@ if(isset($_POST['submit'])){
 
 		if ($count > 0) {
 			$row = $result->fetch_assoc();
+			echo "1";
 			if($row['snake_game'] < $score){
+				echo "2";
 				$sql1 = "update dashboard SET snake_game = '$score' where username = '$uname';";
 				if(mysqli_query($conn,$sql1)){
+					echo "3";
 					echo "<script>alert('New record created successfully');</script>";
 					header('location:clear_reload.php');
 				}else{
+					echo "4";
 					echo "<script>alert('try again :(');</script>";
 				}
 			}

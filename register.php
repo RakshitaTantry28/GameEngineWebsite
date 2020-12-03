@@ -15,8 +15,8 @@ if (isset($_POST['submit'])) {
         $query = "select * from users where username = '$username1'";
         $result = mysqli_query($conn,$query);
 
-        if (mysqli_fetch_row($result) == 1) {
-            echo "username exists";
+        if ( mysqli_num_rows($result) >= 1) {
+            echo "<script>alert('Username Exists');</script>";
         }
         else
         {
