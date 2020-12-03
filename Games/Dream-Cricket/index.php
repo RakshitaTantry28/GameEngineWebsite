@@ -21,11 +21,13 @@
         <!-- <input id="register" class="gobutton" type="button" value="Register & play" onclick="homereg()"> -->
         <div id="head"><br>PLAY MYTeam11 CRICKET</div>
         <input id="gobut" class="gobutton" type="button" value="Let's Play" onclick="homelog()">
+        <br><br><br>
+        <input id="gobut" class="gobutton" type="button" value="EXIT" onclick="window.location.href='../../index.php'">
     </div>    
     <div class="howtoplay">
         <h1>How to Play</h1>
         <hr>
-        <h3 class="sub">1.Select the match<br>2.Create your my11 team<br>3.Score points and win cool prizes</h3
+        <h3 class="sub">1.Select the match<br>2.Create your my11 team<br>3.Score points and win cool prizes</h3>
     </div>
 
     <div id="homelogin" class="modal">

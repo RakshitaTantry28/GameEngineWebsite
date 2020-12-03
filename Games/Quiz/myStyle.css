@@ -2,7 +2,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #000000;
 }
 
 body {
@@ -24,7 +24,7 @@ h2 {
   text-transform: uppercase;
   display:inline-block;
   margin: 40px 8px 10px 8px; 
-  color: #cccccc;
+  color: #56baed;
 }
 
 
@@ -39,6 +39,7 @@ h2 {
   width: 100%;
   min-height: 100%;
   padding: 20px;
+  background-color: black;
 }
 
 h2.score {
@@ -46,6 +47,11 @@ h2.score {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  
+}
+
+h1{
+  color: #56baed;
 }
 
 #formContent {
@@ -81,7 +87,7 @@ h2.inactive {
 
 h2.active {
   color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid #101213;
 }
 
 

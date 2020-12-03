@@ -71,7 +71,7 @@ if(isset($_POST['log'])){
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Options">Options</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Games</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li> -->
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact1">Feedback</a></li>
                         <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger dropbtn" href="javascript:void(0)"><?php echo $_SESSION['indexuser'];?></a>
