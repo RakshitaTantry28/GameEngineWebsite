@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $conn = mysqli_connect('localhost','root','','wdl');
+    $conn = mysqli_connect('localhost','root','root','wdl');
 
     if ($conn->connect_error) {
         die('connection error'.$conn->connect_error);
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $username1 = $_POST['username'];
         $password1 = $_POST['password'];
 
-        $query = 'select * from users where username = "$username1"';
+        $query = "select * from users where username = '$username1'";
         $result = mysqli_query($conn,$query);
 
         if (mysqli_fetch_row($result) == 1) {
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
                 $query2 = "insert into dashboard(username, snake_game) values('$username1', 0)";
                 $result2 = mysqli_query($conn,$query2);
                 if (!$result2) {
-                    echo "<script>alert('Try again');</script>";
+                    echo "<script>alert('Try again :(');</script>";
                 }else{
                     session_start();
                     $_SESSION['user'] = $username1;
@@ -40,31 +40,31 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    $hostname="localhost"; 		//hostname
-    $username="root"; 			//username for database
-    $password=""; 				//database password
-    $dbname="my11"; 		//database name
-    $connect=mysqli_connect($hostname,$username,$password,$dbname) or die("Error Connecting ".  mysqli_connect_error()); 		//make connection
-    $uname = $_POST['username'];
-    $password = $_POST['password'];
+    // $hostname="localhost"; 		//hostname
+    // $username="root"; 			//username for database
+    // $password=""; 				//database password
+    // $dbname="my11"; 		//database name
+    // $connect=mysqli_connect($hostname,$username,$password,$dbname) or die("Error Connecting ".  mysqli_connect_error()); 		//make connection
+    // $uname = $_POST['username'];
+    // $password = $_POST['password'];
 
-    $q="select * from users where uname='$uname'";
+    // $q="select * from users where uname='$uname'";
 
-    $result=mysqli_query($connect,$q);
+    // $result=mysqli_query($connect,$q);
 
 
-    $num=mysqli_num_rows($result);
+    // $num=mysqli_num_rows($result);
 
-    if($num == 1){
-    echo " Duplicate data";
-    header("Refresh:1; url=index.php");
-    }
-    else{
-    $qy="INSERT INTO users (id,uname, password,points,rank) VALUES(NULL,'$uname', '$password',0,0)";
-    if(mysqli_query($connect,$qy)){
-    echo "success";}
-    header("Refresh:1; url=index.php");
-    }
+    // if($num == 1){
+    // echo " Duplicate data";
+    // header("Refresh:1; url=index.php");
+    // }
+    // else{
+    // $qy="INSERT INTO users (id,uname, password,points,rank) VALUES(NULL,'$uname', '$password',0,0)";
+    // if(mysqli_query($connect,$qy)){
+    // echo "success";}
+    // header("Refresh:1; url=index.php");
+    // }
 
 }
 

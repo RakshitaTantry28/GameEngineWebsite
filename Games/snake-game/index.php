@@ -41,7 +41,7 @@ include "session.php"
 <?php
 
 if(isset($_POST['submit'])){
-	$conn = mysqli_connect('localhost','root','','wdl');
+	$conn = mysqli_connect('localhost','root','root','wdl');
 
     if ($conn->connect_error) {
         die('connection error'.$conn->connect_error);
