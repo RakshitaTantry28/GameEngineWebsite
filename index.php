@@ -2,7 +2,7 @@
 
 
 
-$conn = mysqli_connect('localhost','root','root','wdl');
+$conn = mysqli_connect('localhost','root','','wdl');
 session_start();
    
    if(!isset($_SESSION['user']))
@@ -517,7 +517,7 @@ if(isset($_POST['log'])){
         <?php
 
                 //saving reviews
-        $conn = mysqli_connect('localhost','root','root','wdl');
+        $conn = mysqli_connect('localhost','root','','wdl');
         if(isset($_POST['submit'])) {
 
         $name = $_POST['name'];
