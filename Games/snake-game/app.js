@@ -52,6 +52,7 @@ function startGame() {
 
 function createFood() {
     document.getElementById("score").innerHTML = playerScore;
+    document.getElementById("sc").value = playerScore;
   snakeFood = {
     x: Math.round(Math.random() * (gameAreaWidth - cellWidth) / cellWidth),
     y: Math.round(Math.random() * (gameAreaHeight - cellWidth) / cellWidth),
@@ -114,8 +115,7 @@ function writeScore() {
   gameAreaContext.font = "50px sans-serif";
   gameAreaContext.fillStyle = "#FF0000";
   gameAreaContext.fillText("Score: " + playerScore, (gameAreaWidth / 2) - 100, gameAreaHeight / 2);
-
-  document.getElementById("sc").innerHTML = "Score: "+playerScore;
+  document.getElementById("submit").type = "submit";
 }
 
 function createSquare(x, y) {
@@ -133,7 +133,3 @@ function changeDirection(e) {
 
 window.onkeydown = changeDirection;
 window.onload = initialize;
-
-
- 
-  

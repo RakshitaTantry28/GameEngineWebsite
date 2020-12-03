@@ -25,10 +25,16 @@ if (isset($_POST['submit'])) {
             if (!$result1) {
                 echo "<script>alert('Try again');</script>";
             }else{
-                session_start();
-                $_SESSION['user'] = $username1;
-                echo "<script>alert('Registration sucessfully');</script>";
-                header('location:index.php');
+                $query2 = "insert into dashboard(username, snake_game) values('$username1', 0)";
+                $result2 = mysqli_query($conn,$query2);
+                if (!$result2) {
+                    echo "<script>alert('Try again');</script>";
+                }else{
+                    session_start();
+                    $_SESSION['user'] = $username1;
+                    echo "<script>alert('Registration sucessfully');</script>";
+                    header('location:index.php');
+                }
             }
         }
     }

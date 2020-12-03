@@ -604,7 +604,12 @@ if(isset($_POST['log'])){
                                     <h2 class="text-uppercase">Checkers</h2>
                                     <p class="item-intro text-muted">Checking mind</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/checkers.PNG" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <p><ol class="text-left"><li>The player with the white checkers moves first. Checkers may only move one diagonal space forward (toward your opponent’s checkers) 
+                                        in the beginning of the game. Remember that checkers must stay on the dark squares.</li><li>Jump and capture your opponent's checkers. 
+                                        If your checker is located in the diagonal space nearest to your opponent's checker, then you can jump and capture that checker.</li>
+                                        <li>King your checkers when they reach the end of your opponent's board. To crown a checker and make it a king checker, 
+                                        simply place one of your own captured pieces on top of it. The king can move forward and backward. </li><li>Keep jumping and capturing. 
+                                        Continue jumping and capturing your opponent's checkers until they are all removed from the board. Once you have captured all of your opponent’s checkers, you have won the game!</li></ol></p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
                                         <a href="Games/Checkers-Game/index.html" class="text-white">Start Game</a>
@@ -664,7 +669,7 @@ if(isset($_POST['log'])){
                                     <p>Flappy Bird is an arcade-style game in which the player controls the bird Faby, which moves persistently to the right. The player is tasked with navigating Faby through pairs of pipes that have equally sized gaps placed at random heights.</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/FlappyBird/index.html" class="text-white">Start Game</a>
+                                        <a href="Games/FlappyBird/index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -751,7 +756,7 @@ if(isset($_POST['log'])){
                                     <p>The player controls a dot, square, or object on a bordered plane. As it moves forward, it leaves a trail behind, resembling a moving snake. In some games, the end of the trail is in a fixed position, so the snake continually gets longer as it moves. </p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/snake-game/index.html" class="text-white">Start Game</a>
+                                        <a href="Games/snake-game/index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
@@ -849,7 +854,7 @@ if(isset($_POST['log'])){
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>
-                                        <a href="Games/Goblin/index.html" class="text-white">Start Game</a>
+                                        <a href="Games/Goblin/index.php" class="text-white">Start Game</a>
                                     </button>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>

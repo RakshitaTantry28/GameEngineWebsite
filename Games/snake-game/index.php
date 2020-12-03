@@ -1,3 +1,9 @@
+<?php
+
+include "session.php"
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,29 +17,21 @@
 
 <body>
 	<div id="info">
-		<h1><center>Snake Game</center></h1>
+		<h1>Snake Game</h1>
 		Speed: <input type="number" id="gameSpeed" value="5" min="1" max="9" step="1" />
 		  <input type="button" value="Start" id="gameStart" /><br>
-		  
-		  
   		Score: <span id="score"></span>
+
+		  <form name="score" method="POST" action="<?php $_SERVER['SELF_PHP']; ?>">
+			<input type="hidden" id="sc" name="btnClickedValue" value="" /></br>
+			<input type = "hidden" value = "Save score" name="submit" id="submit" />
+		</form>
+
 	</div>
 	<div id="screen">
   		<canvas id="gameArea"></canvas>
   		<script src="app.js"></script>
 	</div>
-
-
-	<div id ="right">
-
-		<form method="POST" action="<?php $_SERVER['SELF_PHP']; ?>">
-			<span id="sc"></span>
-			<input type="button" value="EXIT" id="Exit"  name='exit'/>
-		</form>
-
-	</div>
-
-
 
 </body>
 
@@ -42,12 +40,39 @@
 
 <?php
 
-include '../../session.php';
+if(isset($_POST['submit'])){
+	// $conn = mysqli_connect('localhost','root','root','wdl');	
+	$conn = mysqli_connect('localhost','root','','wdl');
 
-$conn = mysqli_connect('localhost','root','','wdl');
+    if ($conn->connect_error) {
+        die('connection error'.$conn->connect_error);
+    }
+    else{
+		$score = $_POST['btnClickedValue'];
+		$uname = $_SESSION['user'];
 
+		$sql = "select snake_game from dashboard where username = '$uname';";
+		$result = mysqli_query($conn,$sql);
 
+		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+		// $active = $row['active'];
+		
+		$count = mysqli_num_rows($result);
 
-
-
+		if ($count > 0) {
+			$row = $result->fetch_assoc();
+			if($row['snake_game'] < $score){
+				$sql1 = "update dashboard SET snake_game = '$score' where username = '$uname';";
+				if(mysqli_query($conn,$sql1)){
+					echo "<script>alert('New record created successfully');</script>";
+					header('location:clear_reload.php');
+				}else{
+					echo "<script>alert('try again :(');</script>";
+				}
+			}
+		}else{
+			echo "<script>alert('try again :(');</script>";
+		}
+	}
+}
 ?>
