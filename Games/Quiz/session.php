@@ -3,7 +3,7 @@
 
 
 $server = 'localhost';
-$pas = "root";
+$pas = "";
 $name = "root";
 $dbname="wdl";
 

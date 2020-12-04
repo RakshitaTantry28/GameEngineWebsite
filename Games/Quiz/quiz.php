@@ -44,7 +44,7 @@ elseif($_SESSION['clicks']>=15)
 }
 
 $server = 'localhost';
-$password = "root";
+$password = "";
 $username = "root";
 $dbname="wdl";
 

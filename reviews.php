@@ -2,7 +2,7 @@
 
 
 
-$conn = mysqli_connect('localhost','root','root','wdl');
+$conn = mysqli_connect('localhost','root','','wdl');
 session_start();
    
    if(!isset($_SESSION['user']))
@@ -129,7 +129,7 @@ session_start();
 
         <?php
 
-        $conn = mysqli_connect('localhost','root','root','wdl');
+        $conn = mysqli_connect('localhost','root','','wdl');
         if ($conn->connect_error) {
             die('connection error'.$conn->connect_error);
         }

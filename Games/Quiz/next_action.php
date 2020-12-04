@@ -3,7 +3,7 @@
 session_start();
 
 $server = 'localhost';
-$password = "root";
+$password = "";
 $username = "root";
 $dbname="wdl";
 

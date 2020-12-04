@@ -22,11 +22,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/icon.PNG" alt="" />&nbsp;&nbsp;Game World</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-              
+                <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" onclick="window.location='index.php'">Home</button>
             </div>
         </nav>
         
@@ -42,7 +38,7 @@
         <div class="container" style="margin-left:40rem; margin-top:60px; color:#f1f1f1;" class="text-center">
 
 		<?php
-			$conn = mysqli_connect('localhost',"root","root","wdl");
+			$conn = mysqli_connect('localhost',"root","","wdl");
 			if($conn->connect_error){
 				die("connection error".$conn->connect_error);
 			}else{

@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])) {
-    $conn = mysqli_connect('localhost','root','root','wdl');
+    $conn = mysqli_connect('localhost','root','','wdl');
 
     if ($conn->connect_error) {
         die('connection error'.$conn->connect_error);
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
 
     $hostname="localhost"; 		//hostname
     $username="root"; 			//username for database
-    $password="root"; 				//database password
+    $password=""; 				//database password
     $dbname="my11"; 		//database name
     $connect=mysqli_connect($hostname,$username,$password,$dbname) or die("Error Connecting ".  mysqli_connect_error()); 		//make connection
     $uname = $_POST['username'];
