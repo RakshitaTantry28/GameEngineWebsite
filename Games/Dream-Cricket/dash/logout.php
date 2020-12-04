@@ -1,7 +1,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Logout</title>
+    <title>Game World | my11 | Logout</title>
+    <link rel="icon" type="image" href="../../../assets/img/icon.PNG" />
 </head>
 <?php
 include '../connect.php';

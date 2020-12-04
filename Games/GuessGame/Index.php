@@ -3,7 +3,8 @@ require_once('logic.php');
 ?>
 <html>
     <head>
-          <title>Guess-the-switch</title>
+        <title>Game World | Guess the Switch</title>
+        <link rel="icon" type="image" href="../../assets/img/icon.PNG" />
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
           <link rel="stylesheet" href="style.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +25,7 @@ require_once('logic.php');
             Your Score: <span id="myscore"><?php echo $_SESSION['score']; ?></span>
         </div><br>
          <!-- <centre><button class="button1">Exit Game</button></centre>  -->
-         <center><a href="../../index.php" style="color: #18907b;">EXIT GAME!</a></center> 
+         <center><a href="../../index.php#portfolio" style="color: #18907b;">EXIT GAME!</a></center> 
         <div>
         <?php for($i = 0; $i< $switches; $i++){ ?>
             <div class="cube-switch" onclick="clickswitch(this,<?php echo $i ?>)">

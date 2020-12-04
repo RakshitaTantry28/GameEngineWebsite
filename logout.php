@@ -12,9 +12,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-         <title>Game World</title> 
+         <title>Game World | Logout</title> 
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900"rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/icon.PNG" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->

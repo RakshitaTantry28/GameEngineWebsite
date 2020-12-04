@@ -4,8 +4,15 @@ session_start();
 
 ?>
 <link rel = "stylesheet" type = "text/css"  href = "myStyle.css"/>
-
-<div class="wrapper fadeInDown">
+<html>
+<head>
+<title>Game World | Quiz</title>
+    <link rel="icon" type="image" href="../../assets/img/icon.PNG" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+    <div class="wrapper fadeInDown">
   <div id="formContent">
 
   	<h1>YOUR SCORE!!</h1>
@@ -31,3 +38,4 @@ session_destroy();
 
 ?>
 
+</html>

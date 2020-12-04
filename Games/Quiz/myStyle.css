@@ -2,7 +2,7 @@
 /* BASIC */
 
 html {
-  background-color: #000000;
+  background-color: #56baed;
 }
 
 body {
@@ -39,7 +39,7 @@ h2 {
   width: 100%;
   min-height: 100%;
   padding: 20px;
-  background-color: black;
+  background-color: #56baed;
 }
 
 h2.score {
@@ -48,10 +48,6 @@ h2.score {
   font-weight: 600;
   text-transform: uppercase;
   
-}
-
-h1{
-  color: #56baed;
 }
 
 #formContent {

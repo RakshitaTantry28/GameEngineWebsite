@@ -1,15 +1,11 @@
-<?php
-
-
-
-?>
+<html>
 <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Game World</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <title>Game World | Dashboard</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/icon.PNG" />
        
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
  
@@ -25,7 +21,7 @@
         
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="" alt="" />Game World</a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/icon.PNG" alt="" />&nbsp;&nbsp;Game World</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -43,72 +39,28 @@
         
 
 
-        <div id="dashboard" style="margin-top:60px">
+        <div class="container" style="margin-left:40rem; margin-top:60px; color:#f1f1f1;" class="text-center">
 
-        	<center>
-			<table style="width:40% ; font-family: Lucida Console, Courier, monospace" class="text-uppercase" >
-
-			  <tr style="font-size:30px ; color:#4d79ff">
-			    <th >GAME</th>
-			    <th>USER_NAME</th> 
-			    <th>SCORE</th>
-			  </tr>
-
-			  <tr style="font-size:26px ; color:white">
-			    <td>Snake Game</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-			  <tr style="font-size:26px; color:white">
-			    <td>Flappy Bird</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-			   <tr style="font-size:26px; color:white">
-			   	<td>Quiz</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-
-			<tr style="font-size:26px; color:white">
-			   <td>Goblin</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-
-			<tr style="font-size:26px; color:white">
-			   <td>Space Shooter</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-
-			  <tr style="font-size:26px; color:white">
-			   <td>Doodle Jump</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-			  <tr style="font-size:26px; color:white">
-				<td>Guess Game</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-			  <tr style="font-size:26px; color:white">
-				<td>Chess</td>
-			    <td></td> 
-			    <td></td>
-			  </tr>
-
-
-			</table>	
-
-			</center>
+		<?php
+			$conn = mysqli_connect('localhost',"root","root","wdl");
+			if($conn->connect_error){
+				die("connection error".$conn->connect_error);
+			}else{
+				$result = mysqli_query($conn,"select * from dashboard ORDER BY snake_game DESC");
+				echo "<table>";
+				echo "<tr>";    
+				echo "<th style='color:white; padding:10px'>Username</th>";
+				echo "<th style='color:white; padding:10px'>Snake Game</th>";
+				echo "</tr>";
+				while($row = mysqli_fetch_array($result)){
+					echo "<tr>";
+					echo "<td style='color:#f1f1f1; padding:10px'>".$row['username']."</td>";
+					echo "<td style='color:#f1f1f1; padding:10px'>".$row['snake_game']."</td>";
+					echo "</tr>";
+				}
+				echo "</table>";
+			}
+		?>
         </div>
 
         </header>
@@ -116,4 +68,4 @@
 
 
     </body>
-
+</html>

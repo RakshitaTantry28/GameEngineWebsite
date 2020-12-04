@@ -40,31 +40,31 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    // $hostname="localhost"; 		//hostname
-    // $username="root"; 			//username for database
-    // $password=""; 				//database password
-    // $dbname="my11"; 		//database name
-    // $connect=mysqli_connect($hostname,$username,$password,$dbname) or die("Error Connecting ".  mysqli_connect_error()); 		//make connection
-    // $uname = $_POST['username'];
-    // $password = $_POST['password'];
+    $hostname="localhost"; 		//hostname
+    $username="root"; 			//username for database
+    $password="root"; 				//database password
+    $dbname="my11"; 		//database name
+    $connect=mysqli_connect($hostname,$username,$password,$dbname) or die("Error Connecting ".  mysqli_connect_error()); 		//make connection
+    $uname = $_POST['username'];
+    $password = $_POST['password'];
 
-    // $q="select * from users where uname='$uname'";
+    $q="select * from users where uname='$uname'";
 
-    // $result=mysqli_query($connect,$q);
+    $result=mysqli_query($connect,$q);
 
 
-    // $num=mysqli_num_rows($result);
+    $num=mysqli_num_rows($result);
 
-    // if($num == 1){
-    // echo " Duplicate data";
-    // header("Refresh:1; url=index.php");
-    // }
-    // else{
-    // $qy="INSERT INTO users (id,uname, password,points,rank) VALUES(NULL,'$uname', '$password',0,0)";
-    // if(mysqli_query($connect,$qy)){
-    // echo "success";}
-    // header("Refresh:1; url=index.php");
-    // }
+    if($num == 1){
+    echo " Duplicate data";
+    header("Refresh:1; url=index.php");
+    }
+    else{
+    $qy="INSERT INTO users (id,uname, password,points,rank) VALUES(NULL,'$uname', '$password',0,0)";
+    if(mysqli_query($connect,$qy)){
+    echo "success";}
+    header("Refresh:1; url=index.php");
+    }
 
 }
 
@@ -75,9 +75,9 @@ if (isset($_POST['submit'])) {
 <head>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>Game World | login</title>
+	<title>Game World | Register</title>
     <script src="validation.js"></script>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/icon.PNG" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->

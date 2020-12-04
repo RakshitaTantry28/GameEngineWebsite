@@ -1,7 +1,8 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>my11</title>
+        <title>Game Word | my11</title>
+        <link rel="icon" type="image" href="../../assets/img/icon.PNG" />
         <link rel="stylesheet" href="homecss.css" >
         <script src="homescript.js"></script>
     </head>    
@@ -22,7 +23,7 @@
         <div id="head"><br>PLAY MYTeam11 CRICKET</div>
         <input id="gobut" class="gobutton" type="button" value="Let's Play" onclick="homelog()">
         <br><br><br>
-        <input id="gobut" class="gobutton" type="button" value="EXIT" onclick="window.location.href='../../index.php'">
+        <input id="gobut" class="gobutton" type="button" value="EXIT" onclick="window.location.href='../../index.php#portfolio'">
     </div>    
     <div class="howtoplay">
         <h1>How to Play</h1>

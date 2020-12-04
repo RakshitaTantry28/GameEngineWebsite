@@ -49,15 +49,16 @@ while($row = mysqli_fetch_array($result))
 echo "</table>";
 echo "<input type='submit' class='buttons'>";
 echo "</form>";
-     
-
-
-
-
-      
-
-
-
 
 ?>
 
+<html>
+<head>
+    <title>Game World | my11 | Players</title>
+    <link rel="icon" type="image" href="../../../assets/img/icon.PNG" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="main.css" >-->
+</head> 
+</html>

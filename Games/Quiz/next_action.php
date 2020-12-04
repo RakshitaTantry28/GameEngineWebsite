@@ -3,9 +3,9 @@
 session_start();
 
 $server = 'localhost';
-$password = "";
+$password = "root";
 $username = "root";
-$dbname="Quiz";
+$dbname="wdl";
 
 $conn = mysqli_connect("$server","$username","$password","$dbname");
 

@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Goblin</title>
+		<title>Game World | Goblin</title>
+    	<link rel="icon" type="image" href="../../assets/img/icon.PNG" />
 		<style type="text/css">
 			body{
 				text-align: center;
@@ -19,7 +20,7 @@
 		<br>
 		<br>
 		<button style="padding: 14px 40px;">
-            <a href="../../index.php">EXIT</a>
+            <a href="../../index.php#portfolio" style="text-decoration:none">EXIT</a>
         </button>
 	</body>
 </html>

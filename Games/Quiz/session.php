@@ -3,9 +3,9 @@
 
 
 $server = 'localhost';
-$pas = "";
+$pas = "root";
 $name = "root";
-$dbname="Quiz";
+$dbname="wdl";
 
 $conn = mysqli_connect("$server","$name","$pas","$dbname");
 

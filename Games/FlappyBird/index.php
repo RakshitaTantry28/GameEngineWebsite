@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Flappy Bird</title>
+	<title>Game World | Flappy Bird</title>
+  <link rel="icon" type="image" href="../../assets/img/icon.PNG" />
 	<style>
       body{
         text-align: center;
@@ -51,7 +52,7 @@
   <br>
   
   <button style="padding: 14px 40px;">
-    <a href="../../index.php" class="text-white">EXIT</a>
+    <a href="../../index.php#portfolio" class="text-white" style="text-decoration: none;">EXIT</a>
   </button>
 
 </div>

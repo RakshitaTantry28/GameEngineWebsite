@@ -2,7 +2,7 @@
 
 
 
-$conn = mysqli_connect('localhost','root','','wdl');
+$conn = mysqli_connect('localhost','root','root','wdl');
 session_start();
    
    if(!isset($_SESSION['user']))
@@ -37,7 +37,7 @@ if(isset($_POST['log'])){
         <meta name="author" content="" />
          <title>Game World</title> 
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900"rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/icon.PNG" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -62,7 +62,7 @@ if(isset($_POST['log'])){
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 
             <div class="container">
-              <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="" alt="" />Game World</a> 
+              <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/icon.PNG" alt="" />&nbsp;&nbsp;Game World</a> 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -71,7 +71,7 @@ if(isset($_POST['log'])){
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Options">Options</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Games</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Dashboard</a></li> -->
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="dashboard.php">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact1">Feedback</a></li>
                         <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger dropbtn" href="javascript:void(0)"><?php echo $_SESSION['indexuser'];?></a>
@@ -280,7 +280,7 @@ if(isset($_POST['log'])){
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/Dream-Cricket.PNG" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">MYTeam11 Cricket</div>
@@ -322,7 +322,7 @@ if(isset($_POST['log'])){
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.jpg" alt="" />
+                                <img class="img-fluid" src="assets/img/portfolio/quiz.PNG" alt="" />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Quiz</div>
@@ -517,7 +517,7 @@ if(isset($_POST['log'])){
         <?php
 
                 //saving reviews
-        $conn = mysqli_connect('localhost','root','','wdl');
+        $conn = mysqli_connect('localhost','root','root','wdl');
         if(isset($_POST['submit'])) {
 
         $name = $_POST['name'];
@@ -817,7 +817,7 @@ if(isset($_POST['log'])){
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">MYTeam11 Cricket</h2>
                                     <p class="item-intro text-muted">Let's play a game</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-thumbnail.jpg" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/Dream-Cricket.PNG" alt="" />
                                     <p>This Game will make the user select the team and also gets the points in winning teams.
                                         Firstly, users need to register to the system and then they can log in to the system by entering the username and password.
                                         Users will select the team for them and submit it. 
@@ -912,7 +912,7 @@ if(isset($_POST['log'])){
                                     <!-- Project Details Go Here-->
                                     <h2 class="text-uppercase">Quiz</h2>
                                     <p class="item-intro text-muted">Test your knowledge..</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-thumbnail.jpg" alt="" />
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/quiz.PNG" alt="" />
                                     <p>Answer the pop quiz and test your knowledge!!</p>
                                     <button class="btn btn-primary">
                                         <i class="fas fa-rocket mr-1"></i>

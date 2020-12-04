@@ -8,11 +8,12 @@ include "session.php"
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <title>JavaScript Snake Game</title>
-  <link rel="stylesheet" href="app.css" />
+	<title>Game World | Snake Game</title>
+	<link rel="icon" type="image" href="../../assets/img/icon.PNG" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta charset="UTF-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  	<link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
@@ -26,7 +27,7 @@ include "session.php"
 			<input type="hidden" id="sc" name="btnClickedValue" value="" /></br>
 			<input type = "hidden" value = "Save score" name="submit" id="submit" />
 
-			<input type="button" name="EXIT" value="EXIT" onclick="window.location.href='../../index.php'"/>
+			<input type="button" name="EXIT" value="EXIT" onclick="window.location.href='../../index.php#portfolio'"/>
 		</form>
 
 	</div>
