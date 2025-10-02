@@ -13,7 +13,7 @@ A web-based gaming portal with PHP-based authentication,
 - ✅ Individual game pages built with Phaser or vanilla JS
 - ✅ Animations and transitions for interactive feel
 - ✅ Contribution path: users can add their own game code to the platform  
-- ✅ Validation scripts (e.g. `validation.js`) for form inputs  
+- ✅ Validation scripts for form inputs  
 - ✅ Responsive styling using CSS
 
 ---
